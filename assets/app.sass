@@ -69,6 +69,10 @@ h2
 		font-size: 2rem
 	@include mobile
 		font-size: 1.33rem
+
+h4
+	font-weight: bold
+
 p
 	&.large
 		font-size: 3rem
@@ -80,8 +84,30 @@ a
 	text-decoration: none
 	&:hover
 		color: $c-red
-	&:focus, &:active, &:visited
-		color: inherit
+	// &:focus, &:active, &:visited
+	// 	color: inherit
+	&.button
+		display: inline-block
+		padding: .5rem 1rem
+		border-radius: 4px
+		color: white
+		transition: background-color 200ms ease-out
+		&.button-red
+			background-color: $c-red
+			&:hover
+				background-color: $c-red-light
+		&.button-blue
+			background-color: $c-blue
+			&:hover
+				background-color: $c-blue-light
+
+hr
+	display: block
+	height: 1px
+	width: 100%
+	margin: 2rem 0
+	border: none
+	background: $c-gray-light
 
 .wrapper
 	display: grid
