@@ -3,13 +3,12 @@
 		<div class="container">
 			<div class="grid">
 				<div class="content">
-					<h1>{{ expert.title.rendered }}</h1>
-					<h2>{{ expert.acf.details.jobtitle }}</h2>
-					<div v-html="expert.acf.details.description"></div>
+					<h1>{{ info.title.rendered }}</h1>
+					<div v-html="info.acf.content"></div>
 					<SocialMedia :links="'HUHU'" />
 				</div>
 				<div class="image">
-					<img :src="expert.acf.image" alt="" />
+					<img v-if="info.acf.image" :src="info.acf.image" alt="" />
 				</div>
 			</div>
 		</div>
@@ -19,26 +18,24 @@
 <script>
 import axios from 'axios'
 export default {
-	name: 'expert-slug',
+	name: 'informationen-slug',
 	head() {
 		return {
-			title: this.expert.title.rendered + ' | Fokus Berufsbildung 2021'
+			title: this.info.title.rendered + ' | Fokus Berufsbildung 2021'
 		}
 	},
 	async asyncData({ store, params }) {
-		if (!store.getters.getExpertBySlug(params.slug)) {
+		if (!store.getters.getInfoBySlug(params.slug)) {
 			// If store expert is empty, get it by slug from server ...
-			const expertReq = await axios.get(
-				`https://admin.fokus21.rwdev.ch/wp-json/wp/v2/experts?slug=${params.slug}`
-			)
+			const infoReq = await axios.get(`https://admin.fokus21.rwdev.ch/wp-json/wp/v2/infos?slug=${params.slug}`)
 			// ... and store it in vuex
-			store.dispatch('addExpert', expertReq.data[0])
+			store.dispatch('addInfo', infoReq.data[0])
 			// Return values from store
 		}
-		return { expert: store.getters.getExpertBySlug(params.slug) }
+		return { info: store.getters.getInfoBySlug(params.slug) }
 	},
 	mounted() {
-		this.$store.commit('pagetitle/change', 'Experten')
+		this.$store.commit('pagetitle/change', 'Informationen')
 	}
 }
 </script>
@@ -56,10 +53,10 @@ export default {
 		gap: 0
 	.content
 		padding-bottom: 4rem
-		h2
-			font-weight: bold
-			font-size: 1.25rem
-			color: $c-gray
+		h1
+			font-size: 3rem
+			@include mobile
+				font-size: 2rem
 		@include mobile
 			grid-row: 2
 	.image

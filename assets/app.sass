@@ -78,8 +78,11 @@ p
 a
 	color: inherit
 	text-decoration: none
-	&:hover, &:focus, &:active, &:visited
+	&:hover
+		color: $c-red
+	&:focus, &:active, &:visited
 		color: inherit
+
 .wrapper
 	display: grid
 	height: 70vh
@@ -87,7 +90,7 @@ a
 	width: 100vw
 	overflow: hidden
 	box-sizing: border-box
-	overflow-y: scroll
+	overflow-y: auto
 	margin: 15vh 0
 	@include mobile
 		padding: 6rem 1rem

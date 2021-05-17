@@ -12,8 +12,10 @@
 <script>
 export default {
 	name: 'index',
-	head: {
-		title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont'
+	head() {
+		return {
+			title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont'
+		}
 	},
 	data() {
 		return {}

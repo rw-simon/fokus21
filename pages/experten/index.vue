@@ -13,6 +13,11 @@
 import axios from 'axios'
 export default {
 	name: 'experten',
+	head() {
+		return {
+			title: 'Experten | Fokus Berufsbildung 2021'
+		}
+	},
 	async asyncData({ store }) {
 		// Checks if there is at least 2 experts (if you're calling the single expert page directly, the array is length 1 and therefore incomplete)
 		if (store.getters.getExperts().length < 2) {
