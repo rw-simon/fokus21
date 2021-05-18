@@ -83,10 +83,10 @@ export default {
 	router: {
 		// middleware: ['authenticated']
 	},
-	// server: {
-	// 	host: '0.0.0.0',
-	// 	port: 3000
-	// },
+	server: {
+		host: '0.0.0.0',
+		port: 3000
+	},
 
 	// Build Configuration: https://go.nuxtjs.dev/config-build
 	build: {}

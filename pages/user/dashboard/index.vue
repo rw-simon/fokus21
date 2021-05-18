@@ -111,6 +111,9 @@ export default {
 	grid-template-columns: 1fr 1fr
 	gap: 4rem
 	align-items: start
+	@include mobile
+		grid-template-columns: 1fr
+		gap: 0
 	.panel
 		border: 1px solid $c-gray-light
 		border-radius: 6px

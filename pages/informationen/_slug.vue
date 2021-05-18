@@ -62,8 +62,6 @@ export default {
 	.image
 		@include mobile
 			grid-row: 1
-			position: sticky
-			top: 0
 		img
 			object-fit: cover
 			width: 100%
