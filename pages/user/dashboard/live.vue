@@ -17,7 +17,7 @@
 					v-if="active == 'miro'"
 					key="1"
 					width="100%"
-					src="https://miro.com/app/live-embed/o9J_lDKabLE=/?moveToViewport=-73997,-35037,142482,78237"
+					src="https://miro.com/app/live-embed/o9J_lDP5m0Q=/"
 					frameBorder="0"
 					scrolling="no"
 					allowFullScreen
