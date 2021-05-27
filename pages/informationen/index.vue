@@ -21,7 +21,7 @@ export default {
 		// Checks if there is at least 2 infos (if you're calling the single info page directly, the array is length 1 and therefore incomplete)
 		if (store.getters.getInfos().length < 2) {
 			// If store infos is empty, get all infos ...
-			const infoReq = await axios.get('https://admin.fokus21.rwdev.ch/wp-json/wp/v2/infos?per_page=100')
+			const infoReq = await axios.get('https://admin.fokus21.rwdev.ch/wp-json/wp/v2/informationen?per_page=100')
 			// ... and store them in vuex
 			store.dispatch('setInfos', infoReq.data)
 		}
