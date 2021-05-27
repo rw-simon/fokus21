@@ -27,7 +27,9 @@ export default {
 	async asyncData({ store, params }) {
 		if (!store.getters.getInfoBySlug(params.slug)) {
 			// If store expert is empty, get it by slug from server ...
-			const infoReq = await axios.get(`https://admin.fokus21.rwdev.ch/wp-json/wp/v2/infos?slug=${params.slug}`)
+			const infoReq = await axios.get(
+				`https://admin.fokus21.rwdev.ch/wp-json/wp/v2/informationen?slug=${params.slug}`
+			)
 			// ... and store it in vuex
 			store.dispatch('addInfo', infoReq.data[0])
 			// Return values from store
