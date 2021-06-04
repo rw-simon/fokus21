@@ -5,7 +5,7 @@
 				<div class="content">
 					<h1>{{ info.title.rendered }}</h1>
 					<div v-html="info.acf.content"></div>
-					<SocialMedia :links="'HUHU'" />
+					<!-- <social-media :links="'HUHU'" /> -->
 				</div>
 				<div class="image">
 					<img v-if="info.acf.image" :src="info.acf.image" alt="" />

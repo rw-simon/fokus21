@@ -5,9 +5,9 @@
 		</span>
 		<nav :class="{ inverted: isHome, opened: menuOpen }" @mouseleave="menuOpen = false" @click="menuOpen = false">
 			<transition-group name="menuitems">
-				<!-- <nuxt-link v-if="menuOpen" key="1" to="/programm">
+				<nuxt-link v-if="menuOpen" key="1" to="/programm">
 					Programm
-				</nuxt-link> -->
+				</nuxt-link>
 				<nuxt-link v-if="menuOpen" key="2" to="/informationen">
 					Informationen
 				</nuxt-link>

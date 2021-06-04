@@ -20,7 +20,10 @@
 		"jwt-decode": "^3.1.2",
 		"nuxt": "^2.15.6",
 		"sass": "^1.32.11",
-		"sass-loader": "^10.0.1"
+		"sass-loader": "^10.0.1",
+		"swiper": "^5.3.7",
+		"vue": "^2.6.12",
+		"vue-awesome-swiper": "^4.1.1"
 	},
 	"devDependencies": {}
 }
