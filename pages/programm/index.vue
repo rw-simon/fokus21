@@ -3,7 +3,12 @@
 		<div class="container">
 			<!-- <h1>Programm</h1>
 			<h2>// WORK IN PROGRESS //</h2> -->
-			<a href="#" class="button">Programm herunterladen</a>
+			<a
+				target="_blank"
+				href="https://admin.fokus21.rwdev.ch/wp-content/uploads/2021/06/fokus21-programm.pdf"
+				class="button"
+				>Programm herunterladen</a
+			>
 			<div style="margin-top: 2rem">
 				<client-only>
 					<div class="swiper-pagination"></div>
