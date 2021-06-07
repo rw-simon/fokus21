@@ -20,7 +20,7 @@
 export default {
 	name: 'overlay-header',
 	data() {
-		return { isHome: true }
+		return { isHome: false }
 	},
 	mounted() {
 		if ($nuxt.$route.name == 'index') {

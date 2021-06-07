@@ -1,8 +1,6 @@
 <template>
 	<div class="wrapper">
 		<div class="container">
-			<!-- <h1>Programm</h1>
-			<h2>// WORK IN PROGRESS //</h2> -->
 			<a
 				target="_blank"
 				href="https://admin.fokus21.rwdev.ch/wp-content/uploads/2021/06/fokus21-programm.pdf"
@@ -12,12 +10,11 @@
 			<div style="margin-top: 2rem">
 				<client-only>
 					<div class="swiper-pagination"></div>
-
 					<swiper class="swiper" :options="swiperOption">
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">08:30</h3>
-								<h2>Vision &amp; Idee</h2>
+								<nuxt-link to="/programm/vision-idee"><h2>Vision &amp; Idee</h2></nuxt-link>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -29,7 +26,9 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">08:45</h3>
-								<h2>Lernen – ein breiter Horizont</h2>
+								<nuxt-link to="/programm/lernen-ein-breiter-horizont"
+									><h2>Lernen – ein breiter Horizont</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -48,7 +47,9 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">10:00</h3>
-								<h2>TOP Ausbildungsbetrieb</h2>
+								<nuxt-link to="/programm/top-ausbildungsbetrieb"
+									><h2>TOP Ausbildungsbetrieb</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -62,21 +63,27 @@
 								<h3 class="time">10:30</h3>
 								<h2>Workshops</h2>
 								<div class="workshop">
-									<h3>Entdeckendes Lernen</h3>
+									<nuxt-link to="/programm/entdeckendes-lernen"
+										><h3>Entdeckendes Lernen</h3></nuxt-link
+									>
 									<nuxt-link to="/experten/thomas-rentsch">Thomas Rentsch</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Wenn Lernende das Zepter übernehmen</h3>
-									<nuxt-link to="/experten/claudia-bartholet">Claudia Bartholet</nuxt-link>
+									<nuxt-link to="/programm/wenn-lernende-das-zepter-uebernehmen"
+										><h3>Wenn Lernende das Zepter übernehmen</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/claudia-bartholet">Claudia Bartholet</nuxt-link>,
 									<nuxt-link to="/experten/irene-gangwisch">Irene Gangwisch</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Mit Sol unterwegs</h3>
+									<nuxt-link to="/programm/mit-sol-unterwegs"><h3>Mit Sol unterwegs</h3></nuxt-link>
 									<nuxt-link to="/experten/michael-kellenberger">Michael Kellenberger</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Schule im Jahr 2020</h3>
-									<nuxt-link to="/experten/elsbeth-stamm">Elsbeth Stamm</nuxt-link>
+									<nuxt-link to="/programm/schule-im-jahr-2020"
+										><h3>Schule im Jahr 2020</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/elsbeth-stamm">Elsbeth Stamm</nuxt-link>,
 									<nuxt-link to="/experten/florian-schwarz">Florian Schwarz</nuxt-link>
 								</div>
 							</div>
@@ -84,11 +91,13 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">11:15</h3>
-								<h2>Bewältigung der Coronasituation</h2>
+								<nuxt-link to="/programm/bewaeltigung-der-coronasituation"
+									><h2>Bewältigung der Coronasituation</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referent</p>
 									<div>
-										<nuxt-link to="/experten/dani-duttweiler">Dani Duttweiler</nuxt-link>
+										<nuxt-link to="/experten/daniel-duttweiler">Dani Duttweiler</nuxt-link>
 										<nuxt-link to="/experten/nick-schatzmann">Nick Schatzmann</nuxt-link>
 									</div>
 								</div>
@@ -117,7 +126,9 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">13:00</h3>
-								<h2>Lernen - ein breiter Horizont</h2>
+								<nuxt-link to="/programm/lernen-ein-breiter-horizont-2"
+									><h2>Lernen - ein breiter Horizont</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -130,7 +141,9 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">13:20</h3>
-								<h2>Wenn Lernen zur Herausforderung wird</h2>
+								<nuxt-link to="/programm/wenn-lernen-zur-herausforderung-wird"
+									><h2>Wenn Lernen zur Herausforderung wird</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -145,34 +158,41 @@
 								<h3 class="time">13:30</h3>
 								<h2>Workshops</h2>
 								<div class="workshop">
-									<h3>Challenge Lernen - ADS</h3>
+									<nuxt-link to="/programm/challenge-lernen-ads"
+										><h3>Challenge Lernen - ADS</h3></nuxt-link
+									>
 									<nuxt-link to="/experten/regina-renggli">Regina Renggli</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Mental fit</h3>
+									<nuxt-link to="/programm/mental-fit"><h3>Mental fit</h3></nuxt-link>
 									<nuxt-link to="/experten/roger-erni">Roger Erni</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Berufsweltmeisterin</h3>
-									<nuxt-link to="/experten/sonja-durrer">Sonja Durrer</nuxt-link>
+									<nuxt-link to="/programm/von-der-berufsweltmeisterin-lernen"
+										><h3>Berufsweltmeisterin</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/sonja-durrer">Sonja Durrer</nuxt-link>,
 									<nuxt-link to="/experten/simon-hausammenn">Simon Hausammann</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Selbstorganisiertes Lernen</h3>
-									<nuxt-link to="/experten/elsbeth-stamm">Elsbeth Stamm</nuxt-link>
+									<nuxt-link to="/programm/selbstorganisiertes-lernen"
+										><h3>Selbstorganisiertes Lernen</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/elsbeth-stamm">Elsbeth Stamm</nuxt-link>,
 									<nuxt-link to="/experten/florian-schwarz">Florian Schwarz</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>Psychische Gesundheit</h3>
-									<nuxt-link to="/experten/roger-staub">Roger Staub</nuxt-link>
-									<nuxt-link to="/experten/pro-mente-sana">Pro Mente Sana</nuxt-link>
+									<nuxt-link to="/programm/psychische-gesundheit"
+										><h3>Psychische Gesundheit</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/roger-staub">Roger Staub</nuxt-link>,
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">14:15</h3>
-								<h2>Abschlussplenum</h2>
+								<nuxt-link to="/programm/abschlussplenum"><h2>Abschlussplenum</h2></nuxt-link>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -205,6 +225,9 @@
 <script>
 export default {
 	name: 'programm',
+	head: {
+		title: 'Programm | Fokus Berufsbildung 2021'
+	},
 	data: () => ({
 		swiperOption: {
 			slidesPerView: 1,

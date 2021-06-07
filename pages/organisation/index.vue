@@ -75,6 +75,9 @@
 <script>
 export default {
 	name: 'organisation',
+	head: {
+		title: 'Organisation | Fokus Berufsbildung 2021'
+	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Organisation')
 	}

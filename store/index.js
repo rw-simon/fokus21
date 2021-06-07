@@ -1,6 +1,7 @@
 export const state = () => ({
 	experts: [],
-	infos: []
+	infos: [],
+	events: []
 })
 
 export const getters = {
@@ -9,6 +10,15 @@ export const getters = {
 	},
 	getExpertBySlug: state => slug => {
 		return state.experts.filter(e => e.slug == slug)[0]
+	},
+	getExpertById: state => slug => {
+		return state.experts.filter(e => e.id == id)[0]
+	},
+	getEvents: state => () => {
+		return state.events
+	},
+	getEventBySlug: state => slug => {
+		return state.events.filter(e => e.slug == slug)[0]
 	},
 	getInfos: state => () => {
 		return state.infos
@@ -25,6 +35,12 @@ export const mutations = {
 	ADD_EXPERT(state, exp) {
 		state.experts.push(exp)
 	},
+	SET_EVENTS(state, evn) {
+		state.events = evn
+	},
+	ADD_EVENT(state, evn) {
+		state.events.push(evn)
+	},
 	SET_INFOS(state, inf) {
 		state.infos = inf
 	},
@@ -39,6 +55,12 @@ export const actions = {
 	},
 	addExpert({ commit }, exp) {
 		commit('ADD_EXPERT', exp)
+	},
+	setEvents({ commit }, evn) {
+		commit('SET_EVENTS', evn)
+	},
+	addEvent({ commit }, evn) {
+		commit('ADD_EVENT', evn)
 	},
 	setInfos({ commit }, inf) {
 		commit('SET_INFOS', inf)
