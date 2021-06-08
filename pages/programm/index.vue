@@ -27,7 +27,7 @@
 							<div class="panel">
 								<h3 class="time">08:45</h3>
 								<nuxt-link to="/programm/lernen-ein-breiter-horizont"
-									><h2>Lernen – ein breiter Horizont</h2></nuxt-link
+									><h2>Lernen – ein breiter Horizont: Teil 1</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
@@ -127,7 +127,7 @@
 							<div class="panel">
 								<h3 class="time">13:00</h3>
 								<nuxt-link to="/programm/lernen-ein-breiter-horizont-2"
-									><h2>Lernen - ein breiter Horizont</h2></nuxt-link
+									><h2>Lernen - ein breiter Horizont: Teil 2</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
