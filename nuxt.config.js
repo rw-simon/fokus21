@@ -42,31 +42,31 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		'@nuxtjs/pwa',
-		'@nuxtjs/style-resources'
-		// [
-		// 	'@nuxtjs/firebase',
-		// 	{
-		// 		config: {
-		// 			apiKey: 'AIzaSyCYeLVRmer4MHXBHjCDe4fdVCePQHnjc40',
-		// 			authDomain: 'fokus-berufsbildung-371ab.firebaseapp.com',
-		// 			databaseURL: 'https://fokus-berufsbildung-371ab.firebaseio.com',
-		// 			projectId: 'fokus-berufsbildung-371ab',
-		// 			storageBucket: 'fokus-berufsbildung-371ab.appspot.com',
-		// 			messagingSenderId: '272891773690',
-		// 			appId: '1:272891773690:web:9d93b3d46650116196bf43'
-		// 		},
-		// 		services: {
-		// 			auth: true,
-		// 			firestore: true
-		// 			// functions: true,
-		// 			// storage: true,
-		// 			// performance: true,
-		// 			// analytics: true,
-		// 		},
-		// 		onFirebaseHosting: false
-		// 		// lazy: true,
-		// 	}
-		// ]
+		'@nuxtjs/style-resources',
+		[
+			'@nuxtjs/firebase',
+			{
+				config: {
+					apiKey: 'AIzaSyCYeLVRmer4MHXBHjCDe4fdVCePQHnjc40',
+					authDomain: 'fokus-berufsbildung-371ab.firebaseapp.com',
+					databaseURL: 'https://fokus-berufsbildung-371ab.firebaseio.com',
+					projectId: 'fokus-berufsbildung-371ab',
+					storageBucket: 'fokus-berufsbildung-371ab.appspot.com',
+					messagingSenderId: '272891773690',
+					appId: '1:272891773690:web:9d93b3d46650116196bf43'
+				},
+				services: {
+					auth: true,
+					firestore: true
+					// functions: true,
+					// storage: true,
+					// performance: true,
+					// analytics: true,
+				},
+				onFirebaseHosting: false
+				// lazy: true,
+			}
+		]
 	],
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -81,7 +81,7 @@ export default {
 	},
 
 	router: {
-		// middleware: ['authenticated']
+		middleware: ['authenticated']
 	},
 	// server: {
 	// 	host: '0.0.0.0',

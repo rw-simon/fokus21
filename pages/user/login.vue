@@ -35,7 +35,7 @@ export default {
 			})
 			this.isSuccess = true
 			setTimeout(() => {
-				this.$router.push('user/dashboard')
+				this.$router.push('/user/dashboard')
 			}, 1500)
 		},
 		forgotPassword() {

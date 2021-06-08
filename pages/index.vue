@@ -2,8 +2,10 @@
 	<div class="isHome wrapper">
 		<div class="container">
 			<div class="page-title">
-				<h1><span>Fokus</span><span>Berufsbildung</span></h1>
-				<h2>24. Juni 2021 · Live aus der Parkarena Winterthur</h2>
+				<div class="inner-title">
+					<h1><span>Fokus</span><span>Berufsbildung</span></h1>
+					<h2>24. Juni 2021 · Live aus der Parkarena Winterthur</h2>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -36,8 +38,11 @@ export default {
 	.page-title
 		margin-bottom: 6rem // visual center
 		@include mobile
-			transform: rotate(-90deg)
-			margin-left: -10rem
+			.inner-title
+				transform: rotate(-90deg)
+				position: fixed
+				bottom: 16rem
+				left: -9rem
 		h1
 			font-size: 7rem
 			line-height: .9em
@@ -47,5 +52,5 @@ export default {
 			@include tablet
 				font-size: 5rem
 			@include mobile
-				font-size: 4rem
+				font-size: 3rem
 </style>

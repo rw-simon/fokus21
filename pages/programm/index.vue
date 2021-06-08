@@ -80,8 +80,8 @@
 									<nuxt-link to="/experten/michael-kellenberger">Michael Kellenberger</nuxt-link>
 								</div>
 								<div class="workshop">
-									<nuxt-link to="/programm/schule-im-jahr-2020"
-										><h3>Schule im Jahr 2020</h3></nuxt-link
+									<nuxt-link to="/programm/schule-im-jahr-2021"
+										><h3>Schule im Jahr 2021</h3></nuxt-link
 									>
 									<nuxt-link to="/experten/elsbeth-stamm">Elsbeth Stamm</nuxt-link>,
 									<nuxt-link to="/experten/florian-schwarz">Florian Schwarz</nuxt-link>
@@ -92,7 +92,7 @@
 							<div class="panel">
 								<h3 class="time">11:15</h3>
 								<nuxt-link to="/programm/bewaeltigung-der-coronasituation"
-									><h2>Bewältigung der Coronasituation</h2></nuxt-link
+									><h2>Task Force – Bewältigung der Coronasituation</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
@@ -185,7 +185,7 @@
 									<nuxt-link to="/programm/psychische-gesundheit"
 										><h3>Psychische Gesundheit</h3></nuxt-link
 									>
-									<nuxt-link to="/experten/roger-staub">Roger Staub</nuxt-link>,
+									<nuxt-link to="/experten/roger-staub">Roger Staub</nuxt-link>
 								</div>
 							</div>
 						</swiper-slide>

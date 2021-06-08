@@ -22,7 +22,9 @@ export default {
 		// Checks if there is at least 2 experts (if you're calling the single expert page directly, the array is length 1 and therefore incomplete)
 		if (store.getters.getExperts().length < 2) {
 			// If store experts is empty, get all experts ...
-			const expertReq = await axios.get('https://admin.fokus21.rwdev.ch/wp-json/wp/v2/experts?per_page=100')
+			const expertReq = await axios.get(
+				'https://admin.fokus21.rwdev.ch/wp-json/wp/v2/experts?per_page=100&orderby=title&order=asc'
+			)
 			// ... and store them in vuex
 			store.dispatch('setExperts', expertReq.data)
 		}

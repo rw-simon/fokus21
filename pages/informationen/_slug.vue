@@ -45,6 +45,8 @@ export default {
 <style lang="sass" scoped>
 .container
 	width: 75vw
+p
+	font-weight: 200
 .grid
 	display: grid
 	grid-template-columns: 1fr 1fr

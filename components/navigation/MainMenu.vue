@@ -12,7 +12,7 @@
 					Informationen
 				</nuxt-link>
 				<nuxt-link v-if="menuOpen" key="3" to="/experten">
-					Experten
+					Expert*innen
 				</nuxt-link>
 				<nuxt-link v-if="menuOpen" key="4" to="/organisation">
 					Organisation
@@ -61,6 +61,8 @@ nav
 		width: 100vw
 	&.inverted
 		background: none
+		@include mobile
+			background: $c-red
 	&.opened
 		height: 100vh
 		transition-delay: 0ms
