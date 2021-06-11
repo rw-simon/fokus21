@@ -9,10 +9,9 @@
 			</div>
 		</div>
 		<div class="anmelden">
-			<a
-				href="mailto:info@fokus-berufsbildung.ch?subject=Anmeldung%20Fokus%20Berufsbildung%202021%20:%20Lernen–%20ein%20breiter%20Horizont&body=Guten%20Tag%0D%0A%0D%0AIch%20möchte%20mich%20gerne%20für%20den%20Event%20Fokus%20Berufsbildung%202021:%20Lernen%20–%20ein%20breiter%20Horizont%20anmelden.%0D%0A%0D%0AMeine%20Kontaktangaben:%20%0D%0AName:%0D%0AStrasse%20Nr.:%0D%0APLZ%20Ort:%0D%0ATelefon:%0D%0A%0D%0AFreundliche%20Grüsse"
+			<nuxt-link to="/user/register"
 				>Jetzt Anmelden<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
-			></a>
+			></nuxt-link>
 		</div>
 	</div>
 </template>

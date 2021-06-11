@@ -19,7 +19,7 @@ export const actions = {
 			Cookie.set('access_token', userToken) // saves token as cookie
 			commit('SET_USER', {
 				email,
-				uid // set user locally
+				uid
 			})
 		} catch (err) {
 			throw err
@@ -36,7 +36,12 @@ export const actions = {
 						vorname: account.vorname,
 						nachname: account.nachname,
 						referal: account.referal,
-						email: account.email
+						email: account.email,
+						address: { street: '', nr: '', plz: '', city: '' },
+						firma: { name: '' },
+						phone: '',
+						ticket: { bought: false },
+						workshops: { morning: '', afternoon: '' }
 					})
 			}) // register the user (in fb.auth as well as fb.firestore)
 			const userToken = await this.$fire.auth.currentUser.getIdToken() // creates json web token from firebase

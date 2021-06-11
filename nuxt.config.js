@@ -64,7 +64,7 @@ export default {
 					// analytics: true,
 				},
 				onFirebaseHosting: false
-				// lazy: true,
+				// lazy: true
 			}
 		]
 	],

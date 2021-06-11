@@ -15,9 +15,9 @@
 								<h2>{{ user.vorname }} {{ user.nachname }}</h2>
 							</div>
 							<hr />
-							<div v-if="user.address.street">
+							<div>
 								<h4>Kontakt</h4>
-								<p>
+								<p v-if="user.address.street">
 									{{ user.address.street }} {{ user.address.nr }}<br />{{ user.address.plz }}
 									{{ user.address.city }}
 								</p>
@@ -30,7 +30,7 @@
 					</div>
 				</div>
 				<div>
-					<div class="panel">
+					<div class="panel" v-if="user">
 						<div class="next-event">
 							<h3>Nächster Event</h3>
 							<h2>Lernen – ein breiter Horizont</h2>
@@ -39,7 +39,10 @@
 							<nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
 								>Jetzt anmelden</nuxt-link
 							>
-							<a v-else>Bereits angemeldet</a>
+							<p v-else>Du bist bereits angemeldet!</p>
+							<!-- <nuxt-link v-else class="button button-blue" to="/user/get-ticket"
+								>Anmeldung ändern</nuxt-link
+							> -->
 							<nuxt-link to="/programm" class="button button-blue">Programm</nuxt-link>
 							<hr />
 							<div class="event-details">
@@ -48,7 +51,22 @@
 								<p>Ort</p>
 								<p><span style="font-style: italic;">Online</span> – Live aus der Parkarena</p>
 							</div>
-							<hr />
+							<div class="selectedworkshops" v-if="user.workshops.morning && user.ticket.bought">
+								<hr />
+								<h4>Deine Workshops</h4>
+								<div>
+									<p>
+										<span style="font-size:.75rem;font-weight:bold;display:inline-block;width:100px"
+											>Morgen: </span
+										><span>{{ user.workshops.morning }}</span>
+									</p>
+									<p>
+										<span style="font-size:.75rem;font-weight:bold;display:inline-block;width:100px"
+											>Nachmittag: </span
+										><span>{{ user.workshops.afternoon }}</span>
+									</p>
+								</div>
+							</div>
 							<!-- <div class="downloads">
 								<h4>Downloads &amp; Videos</h4>
 								<a href="#"
@@ -82,81 +100,38 @@ import Cookie from 'js-cookie'
 
 export default {
 	name: 'user-dashboard',
-	data: () => ({
-		user: {
-			vorname: '',
-			nachname: '',
-			address: {},
-			phone: '',
-			email: '',
-			firma: {},
-			ticket: {}
+	head: {
+		title: 'Dashboard | Fokus Berufsbildung 2021'
+	},
+	data() {
+		return {
+			user: {
+				vorname: '',
+				nachname: '',
+				address: { street: '', nr: '', plz: '', city: '' },
+				phone: '',
+				email: '',
+				firma: { name: '' },
+				ticket: { bought: false },
+				workshops: { morning: '', afternoon: '' }
+			}
 		}
-	}),
+	},
 	mounted() {
-		let userRef = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
-		userRef
+		// alter to fetch()
+		let userDocument = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
+		userDocument
 			.get()
 			.then(doc => {
-				if (!doc.exists) {
-				} else {
-					if (!doc.data().address) {
-						this.$fire.firestore
-							.collection('users')
-							.doc(this.$store.state.users.user.uid)
-							.update({
-								address: {
-									street: '',
-									nr: '',
-									plz: '',
-									city: ''
-								}
-							})
-					}
-					if (!doc.data().phone) {
-						this.$fire.firestore
-							.collection('users')
-							.doc(this.$store.state.users.user.uid)
-							.update({
-								phone: ''
-							})
-					}
-					if (!doc.data().email) {
-						this.$fire.firestore
-							.collection('users')
-							.doc(this.$store.state.users.user.uid)
-							.update({
-								email: ''
-							})
-					}
-					if (!doc.data().firma) {
-						this.$fire.firestore
-							.collection('users')
-							.doc(this.$store.state.users.user.uid)
-							.update({
-								firma: { name: '' }
-							})
-					}
-					if (!doc.data().ticket) {
-						this.$fire.firestore
-							.collection('users')
-							.doc(this.$store.state.users.user.uid)
-							.update({
-								ticket: {
-									paid: false,
-									bought: false,
-									discount: false,
-									ticketValue: 250
-								}
-							})
-					}
-					this.user.vorname = doc.data().vorname
-					this.user.nachname = doc.data().nachname
-					this.user.address = doc.data().address
-					this.user.phone = doc.data().phone
-					this.user.email = doc.data().email
-					this.user.firma = doc.data().firma
-					this.user.ticket = doc.data().ticket
+				if (doc.exists) {
+					let mergedUserDocument = { ...this.user, ...doc.data() }
+					this.$fire.firestore
+						.collection('users')
+						.doc(this.$store.state.users.user.uid)
+						.update(mergedUserDocument)
+						.then(() => {
+							this.user = mergedUserDocument
+						})
 				}
 			})
 			.catch(err => {
@@ -168,8 +143,8 @@ export default {
 	methods: {
 		async logout() {
 			await this.$fire.auth.signOut()
-			await Cookie.remove('access_token')
-			location.href = '/'
+			Cookie.remove('access_token')
+			location.href = '/user/login'
 		}
 	}
 }

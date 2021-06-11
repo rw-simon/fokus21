@@ -11,6 +11,22 @@
 	opacity: 0
 	transform: translateY(1rem)
 
+.steps-enter-active
+	transition: opacity 0.2s, transform .3s
+	transition-delay: .5s
+
+.steps-leave-active
+	transition: opacity 0.2s, transform .3s
+
+.steps-enter
+	opacity: 0
+	transition-delay: .5s
+	transform: translateX(2rem)
+
+.steps-leave-to
+	opacity: 0
+	transform: translateX(-2rem)
+
 .page-enter-active, .page-leave-active
 	transition: opacity 0.4s, transform 0.4s
 
@@ -116,7 +132,7 @@ a
 			&:hover
 				background-color: $c-gray
 
-input
+select, input
 	border: 1px solid $c-gray-light
 	padding: .5rem 1rem
 	border-radius: 4px
@@ -124,8 +140,24 @@ input
 	font-family: 'HelveticaNeue'
 	font-weight: 300
 	display: block
-	&[type="checkbox"]
-		display: inline-block
+	width: 100%
+	&[type="radio"], &[type="checkbox"]
+		appearance: none
+		-moz-appearance: none
+		-webkit-appearance: none
+		-ms-progress-appearance: none
+		height: 1.2rem
+		width: 1.2rem
+		vertical-align: middle
+		margin-top: -1px
+		padding: 0
+		transition: background 100ms ease-out
+		cursor: pointer
+		&:checked
+			border-color: $c-red
+			background: $c-red
+	&[type="radio"]
+		border-radius: 50%
 
 hr
 	display: block

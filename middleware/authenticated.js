@@ -4,6 +4,9 @@ export default function({ store, route, redirect }) {
 	if (!Object.keys(user).length && route.path.match(blockedRoute)) {
 		redirect('/user/login')
 	}
+	if (!Object.keys(user).length && route.path.match('get-ticket')) {
+		redirect('/user/register')
+	}
 	if (Object.keys(user).length && (route.path.match('login') || route.path.match('register'))) {
 		redirect('/user/dashboard')
 	}
