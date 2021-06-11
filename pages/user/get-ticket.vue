@@ -28,21 +28,27 @@
 							<input
 								type="text"
 								required
-								v-model="accountDetail.street"
+								v-model="accountDetail.address.street"
 								placeholder="Strasse*"
 								class="long"
 							/>
-							<input type="text" required v-model="accountDetail.nr" placeholder="Nr*" class="short" />
 							<input
 								type="text"
 								required
-								v-model="accountDetail.plz"
+								v-model="accountDetail.address.nr"
+								placeholder="Nr*"
+								class="short"
+							/>
+							<input
+								type="text"
+								required
+								v-model="accountDetail.address.plz"
 								placeholder="PLZ*"
 								class="short"
 							/><input
 								type="text"
 								required
-								v-model="accountDetail.city"
+								v-model="accountDetail.address.city"
 								placeholder="Ort*"
 								class="long"
 							/><input
@@ -303,7 +309,7 @@ export default {
 				.collection('mail')
 				.doc('confirmation_' + this.$store.state.users.user.email + Date.now().toString())
 				.set({
-					to: 'simon.fischer@rechtwinklig.ch', //this.$store.state.users.user.email.toString(),
+					to: ['info@fokus-berufsbildung.ch'], //this.$store.state.users.user.email.toString(),
 					bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für den 24. Juni',
