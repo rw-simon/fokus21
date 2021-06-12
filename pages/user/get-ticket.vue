@@ -61,7 +61,7 @@
 								type="text"
 								required
 								v-model="accountDetail.email"
-								placeholder="Geburtstag"
+								placeholder="Email"
 								class="medium"
 							/>
 						</form>
@@ -275,7 +275,8 @@ export default {
 			},
 			phone: '',
 			email: '',
-			firma: { name: '' }
+			firma: { name: '' },
+			birthday: ''
 		},
 		errorMsg: '',
 		selectedWorkshop: ['', ''],
@@ -387,7 +388,7 @@ export default {
 				this.errorMsg = 'Bitte gib deine Postleitzahl ein'
 			} else if (!this.accountDetail.address.city) {
 				this.errorMsg = 'Bitte gib deinen Wohnort ein'
-			} else if (!this.accountDetail.address.phone) {
+			} else if (!this.accountDetail.phone) {
 				this.errorMsg = 'Bitte gib deine Telefonnummer ein'
 			} else {
 				this.errorMsg = ''
