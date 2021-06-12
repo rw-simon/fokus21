@@ -367,10 +367,10 @@ export default {
 						.doc(this.$store.state.users.user.uid)
 						.update({
 							address: {
-								street: this.accountDetail.street,
-								nr: this.accountDetail.nr,
-								plz: this.accountDetail.plz,
-								city: this.accountDetail.city
+								street: this.accountDetail.address.street,
+								nr: this.accountDetail.address.nr,
+								plz: this.accountDetail.address.plz,
+								city: this.accountDetail.address.city
 							},
 							phone: this.accountDetail.phone,
 							firma: { name: this.accountDetail.firma }
@@ -379,15 +379,15 @@ export default {
 			})
 		},
 		checkAddressData() {
-			if (!this.accountDetail.street) {
+			if (!this.accountDetail.address.street) {
 				this.errorMsg = 'Bitte gib deine Strasse ein'
-			} else if (!this.accountDetail.nr) {
+			} else if (!this.accountDetail.address.nr) {
 				this.errorMsg = 'Bitte gib deine Hausnummer ein'
-			} else if (!this.accountDetail.plz) {
+			} else if (!this.accountDetail.address.plz) {
 				this.errorMsg = 'Bitte gib deine Postleitzahl ein'
-			} else if (!this.accountDetail.city) {
+			} else if (!this.accountDetail.address.city) {
 				this.errorMsg = 'Bitte gib deinen Wohnort ein'
-			} else if (!this.accountDetail.phone) {
+			} else if (!this.accountDetail.address.phone) {
 				this.errorMsg = 'Bitte gib deine Telefonnummer ein'
 			} else {
 				this.errorMsg = ''
