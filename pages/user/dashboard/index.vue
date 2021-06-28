@@ -32,14 +32,14 @@
 				<div>
 					<div class="panel" v-if="user">
 						<div class="next-event">
-							<h3>Nächster Event</h3>
+							<h3>24. Juni 2021</h3>
 							<h2>Lernen – ein breiter Horizont</h2>
-							<h3>CHF 250.–</h3>
+							<!-- <h3>CHF 250.–</h3> -->
 							<br />
-							<nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
+							<!-- <nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
 								>Jetzt anmelden</nuxt-link
-							>
-							<p v-else>Du bist bereits angemeldet!</p>
+							> -->
+							<!-- <p v-else>Du bist bereits angemeldet!</p> -->
 							<!-- <nuxt-link v-else class="button button-blue" to="/user/get-ticket"
 								>Anmeldung ändern</nuxt-link
 							> -->

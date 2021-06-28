@@ -4,15 +4,15 @@
 			<div class="page-title">
 				<div class="inner-title">
 					<h1><span>Fokus</span><span>Berufsbildung</span></h1>
-					<h2>24. Juni 2021 · Live aus der Parkarena Winterthur</h2>
+					<h2>Lernen – ein breiter Horizont</h2>
 				</div>
 			</div>
 		</div>
-		<div class="anmelden">
+		<!-- <div class="anmelden">
 			<nuxt-link to="/user/register"
 				>Jetzt Anmelden<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
 			></nuxt-link>
-		</div>
+		</div> -->
 	</div>
 </template>
 

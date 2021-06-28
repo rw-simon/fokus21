@@ -210,9 +210,11 @@
 							<div>
 								<p><strong>Rechnungsadresse </strong><a href="#" @click="step = 1">(ändern)</a></p>
 								<p>
-									<span v-if="accountDetail.firma">{{ accountDetail.firma.name }}<br /></span
-									><span>{{ accountDetail.street }} </span><span>{{ accountDetail.nr }}</span
-									><br /><span>{{ accountDetail.plz }} </span><span>{{ accountDetail.city }}</span
+									<span v-if="accountDetail.firma.name">{{ accountDetail.firma.name }}<br /></span
+									><span>{{ accountDetail.address.street }} </span
+									><span>{{ accountDetail.address.nr }}</span
+									><br /><span>{{ accountDetail.address.plz }} </span
+									><span>{{ accountDetail.address.city }}</span
 									><br /><span>{{ accountDetail.phone }}</span
 									><br /><span>{{ accountDetail.email }}</span>
 								</p>
@@ -374,7 +376,7 @@ export default {
 								city: this.accountDetail.address.city
 							},
 							phone: this.accountDetail.phone,
-							firma: { name: this.accountDetail.firma }
+							firma: { name: this.accountDetail.firma.name }
 						})
 				}
 			})
