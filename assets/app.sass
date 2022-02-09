@@ -39,11 +39,11 @@
 	transform: translateY(-1rem)
 
 .menuitems-enter-active, .menuitems-leave-active
-	transition: opacity 0.2s, transform 0.8s 
+	transition: opacity 0.2s, transform 0.8s
 	@for $i from 1 through 10
 		&:nth-child(#{$i})
 			transition-delay: #{$i*100}ms
-	
+
 .menuitems-enter
 	opacity: 0
 	transform: translateX(2rem)
@@ -91,7 +91,7 @@ h1
 		font-size: 2rem
 
 h2
-	font-size: 2.5rem
+	font-size: 3rem
 	@include tablet
 		font-size: 2rem
 	@include mobile

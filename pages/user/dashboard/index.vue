@@ -1,5 +1,6 @@
 <template>
 	<div class="wrapper">
+		<pre>{{ user }}</pre>
 		<div class="container" v-if="user.vorname">
 			<section class="settings">
 				<!-- <nuxt-link to="/user/einstellungen">Einstellungen</nuxt-link> -->

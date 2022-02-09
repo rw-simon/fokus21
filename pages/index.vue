@@ -8,11 +8,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="anmelden">
-			<nuxt-link to="/user/register"
-				>Jetzt Anmelden<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
+		<div class="anmelden">
+			<nuxt-link to="/informationen/teilnahme"
+				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
 			></nuxt-link>
-		</div> -->
+		</div>
 	</div>
 </template>
 
@@ -66,7 +66,7 @@ export default {
 				bottom: 16rem
 				left: -9rem
 		h1
-			font-size: 7rem
+			font-size: 8rem
 			line-height: .9em
 			text-transform: uppercase
 			span

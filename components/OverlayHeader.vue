@@ -7,9 +7,9 @@
 		</div>
 		<div class="control-area">
 			<span>
-				<nuxt-link to="/user/dashboard">
+				<!-- <nuxt-link to="/user/dashboard">
 					<img :class="{ inverted: isHome }" src="/icons/icon_user.svg" alt="" />
-				</nuxt-link>
+				</nuxt-link> -->
 			</span>
 			<navigation-main-menu :isHome="isHome" />
 		</div>

@@ -1,11 +1,12 @@
 <template>
 	<div class="wrapper">
 		<div class="container">
+			<h1>Programm 2021</h1>
 			<a
 				target="_blank"
 				href="https://admin.fokus21.rwdev.ch/wp-content/uploads/2021/06/fokus21-programm.pdf"
 				class="button"
-				>Programm herunterladen</a
+				>Herunterladen</a
 			>
 			<div style="margin-top: 2rem">
 				<client-only>
@@ -27,7 +28,7 @@
 							<div class="panel">
 								<h3 class="time">08:45</h3>
 								<nuxt-link to="/programm/lernen-ein-breiter-horizont"
-									><h2>Lernen – ein breiter Horizont: Teil 1</h2></nuxt-link
+									><h2>Lernen – ein breiter Horizont P1</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
@@ -127,7 +128,7 @@
 							<div class="panel">
 								<h3 class="time">13:00</h3>
 								<nuxt-link to="/programm/lernen-ein-breiter-horizont-2"
-									><h2>Lernen - ein breiter Horizont: Teil 2</h2></nuxt-link
+									><h2>Lernen - ein breiter Horizont P2</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
