@@ -11,7 +11,7 @@
 						><img src="/logos/logo_berufsbildnerch.png" alt="Logo berufsbildner.ch"
 					/></a>
 					<a href="https://www.yousty.ch" target="_blank"
-						><img src="/logos/logo_yousty.png" alt="Logo Yousty"
+						><img src="/logos/Yousty-Logo-ohne-text.png" alt="Logo Yousty"
 					/></a>
 				</div>
 			</section>
@@ -35,7 +35,7 @@
 					<a href="https://www.professional.ch" target="_blank"
 						><img src="/logos/logo_professionalch.png" alt="Logo professional.ch"
 					/></a>
-					<a href="https://www.sib.ch" target="_blank"><img src="/logos/logo_sib.png" alt="Logo SIB"/></a>
+					<a href="https://www.sib.ch" target="_blank"><img src="/logos/logo_sib.png" alt="Logo SIB" /></a>
 				</div>
 			</section>
 			<section class="supporter">
@@ -76,11 +76,11 @@
 export default {
 	name: 'organisation',
 	head: {
-		title: 'Organisation | Fokus Berufsbildung 2021'
+		title: 'Organisation | Fokus Berufsbildung 2021',
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Organisation')
-	}
+	},
 }
 </script>
 
