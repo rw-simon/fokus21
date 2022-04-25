@@ -15,7 +15,7 @@
 					/></a>
 				</div>
 			</section>
-			<section class="hauptsponsoren">
+			<!-- <section class="hauptsponsoren">
 				<h2>Hauptsponsoren</h2>
 				<div class="logos">
 					<a href="https://stadt.winterthur.ch" target="_blank"
@@ -59,7 +59,7 @@
 						><img src="/logos/logo_tcszuerich.png" alt="Logo TCS Zürich"
 					/></a>
 				</div>
-			</section>
+			</section> -->
 			<section class="admin">
 				<h2>Web &amp; Admin</h2>
 				<div class="logos">
@@ -76,11 +76,11 @@
 export default {
 	name: 'organisation',
 	head: {
-		title: 'Organisation | Fokus Berufsbildung 2021',
+		title: 'Organisation | Fokus Berufsbildung 2021'
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Organisation')
-	},
+	}
 }
 </script>
 

@@ -11,9 +11,9 @@
 				<nuxt-link v-if="menuOpen" key="3" to="/informationen/teilnahme">
 					Teilnahme
 				</nuxt-link>
-				<!-- <nuxt-link v-if="menuOpen" key="4" to="/organisation">
+				<nuxt-link v-if="menuOpen" key="4" to="/organisation">
 					Organisation
-				</nuxt-link> -->
+				</nuxt-link>
 				<nuxt-link v-if="menuOpen" key="1" to="/2021">
 					Fokus 2021
 				</nuxt-link>

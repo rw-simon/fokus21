@@ -7,25 +7,39 @@
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
 			</p>
 			<p>
+				Vorteile:
+			</p>
+			<ul>
+				<li>
+					Platz gesichert
+				</li>
+				<li>
+					Vorreserervirungsrecht Workshop
+				</li>
+				<li>
+					Laufend Infos und Updates
+				</li>
+			</ul>
+			<p>
 				Melden Sie sich bereits jetzt unverbindlich für die erste Ausgabe von Fokus Berufsbildung an! Damit
 				haben Sie Ihren Platz am Event auf sicher und Sie kommen in den Genuss des exklusiven
 				Vorreservierungsrechts bei unserem Workshopangebot. Ausserdem halten wir Sie bezüglich News, Programm
 				und Details des Anlasses laufend up-to-date..
 			</p>
 			<hr />
-			<strong>Jetzt unverbindlich registrieren!</strong><br />
+			<strong v-html="registered ? 'Danke für Ihre Anmeldung!' : 'Jetzt unverbindlich registrieren!'" /><br />
 			<br />
-			<form @submit.prevent="register" class="register" v-if="!registered">
-				<select name="anrede" id="">
+			<form @submit.prevent="sendMailToSimon" class="register" v-if="!registered">
+				<select required name="anrede" id="">
 					<option value="" disabled selected>Anrede</option>
-					<option value="">Herr</option>
-					<option value="">Frau</option>
-					<option value="">Andere</option> </select
+					<option value="Herr">Herr</option>
+					<option value="Frau">Frau</option>
+					<option value="Andere">Andere</option> </select
 				><span></span>
-				<input type="text" placeholder="Vorname" v-bind="vorname" required />
-				<input type="text" placeholder="Name" v-bind="nachname" required />
-				<input type="email" placeholder="Email" v-bind="email" required />
-				<input type="text" placeholder="Unternehmen" v-bind="unternehmen" required />
+				<input type="text" placeholder="Vorname" v-model="vorname" required />
+				<input type="text" placeholder="Name" v-model="name" required />
+				<input type="email" placeholder="Email" v-model="email" required />
+				<input type="text" placeholder="Unternehmen" v-model="unternehmen" required />
 				<input style="cursor: pointer" type="submit" value="Anmelden" />
 			</form>
 			<div v-else>
@@ -47,10 +61,27 @@ export default {
 			name: '',
 			vorname: '',
 			tel: '',
-			unternehmen: ''
+			unternehmen: '',
+			anrede: ''
 		}
 	},
 	methods: {
+		sendMailToSimon() {
+			this.$fire.firestore
+				.collection('mail')
+				.doc('fokus21_prereg_' + this.email + '_' + Date.now().toString())
+				.set({
+					to: ['thebetaworld@gmail.com'], //this.$store.state.users.user.email.toString(),
+					// bcc: ['admin@rechtwinklig.ch'],
+					message: {
+						subject: 'Neue Anmeldung für Fokus 21',
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
+					}
+				})
+				.then(() => {
+					this.register()
+				})
+		},
 		register() {
 			let v = this
 			setTimeout(function() {
