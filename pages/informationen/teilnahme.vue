@@ -3,27 +3,29 @@
 		<div class="container">
 			<h1>Teilnahme 2022</h1>
 			<p style="font-weight: bold; font-size:1.5rem">
-				Der Fokus Berufsbildungs Event wird auch diese Jahr wieder durchgeführt. Dies mit dem Schwerpunkt:
-				Lernen – ein breiter Horizont. Über Örtlichkeit und Datum werden wir im Frühling 2022 informieren.
+				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
+				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
 			</p>
 			<p>
-				Aufgrund der herausfordernden Bedingungen für Anlässe zeigt Fokus Berufsbildung neben den inhaltlichen
-				Themen auch eine reiche Auswahl an digitalen Möglichkeiten. <br /><br />
-				Die Teilnahme steht allen Interessierten offen.
-				<br />
-				<br />
-				Interessierte können sich ab Frühling 2022 an den Event anmelden.
-				<br />
-				<br />
-				Wir behalten uns vor, den Event aufgrund der aktuellen Situation digital durchzuführen. Die
-				Teilnahmegebühr beträgt <strong>CHF 250.–</strong> und beinhaltet neben den Plenumsveranstaltungen
-				diverse Workshops und Interviews mit Berufsbildungs-Experten.
+				Melden Sie sich bereits jetzt unverbindlich für die erste Ausgabe von Fokus Berufsbildung an! Damit
+				haben Sie Ihren Platz am Event auf sicher und Sie kommen in den Genuss des exklusiven
+				Vorreservierungsrechts bei unserem Workshopangebot. Ausserdem halten wir Sie bezüglich News, Programm
+				und Details des Anlasses laufend up-to-date..
 			</p>
 			<hr />
-			<strong>Gerne informieren wir Sie, sobald die Anmeldung verfügbar ist.</strong><br />
+			<strong>Jetzt unverbindlich registrieren!</strong><br />
 			<br />
 			<form @submit.prevent="register" class="register" v-if="!registered">
+				<select name="anrede" id="">
+					<option value="" disabled selected>Anrede</option>
+					<option value="">Herr</option>
+					<option value="">Frau</option>
+					<option value="">Andere</option> </select
+				><span></span>
+				<input type="text" placeholder="Vorname" v-bind="vorname" required />
+				<input type="text" placeholder="Name" v-bind="nachname" required />
 				<input type="email" placeholder="Email" v-bind="email" required />
+				<input type="text" placeholder="Unternehmen" v-bind="unternehmen" required />
 				<input style="cursor: pointer" type="submit" value="Anmelden" />
 			</form>
 			<div v-else>
@@ -37,10 +39,15 @@
 export default {
 	name: 'teilnahme',
 	data() {
-		return{
+		return {
 			registered: false,
-			message: 'Besten Dank für Ihre Registration. Wir werden Ihnen eine Email zustellen, sobald Sie sich für den Event FOKUS 2022 Anmelden können.',
+			message:
+				'Besten Dank für Ihre Registration. Wir werden uns bei Ihnen melden, sobald weitere Informationen und Anmeldemöglichkeiten verfügbar sind.',
 			email: '',
+			name: '',
+			vorname: '',
+			tel: '',
+			unternehmen: ''
 		}
 	},
 	methods: {
@@ -48,9 +55,12 @@ export default {
 			let v = this
 			setTimeout(function() {
 				v.registered = true
-				console.log("registered");
+				console.log('registered')
 			}, 1000)
-		},
+		}
+	},
+	mounted() {
+		this.$store.commit('pagetitle/change', 'Teilnahme')
 	}
 }
 </script>
@@ -59,9 +69,9 @@ export default {
 .register
 	display: grid
 	grid-template-columns: 1fr 1fr
-	gap: 4rem
+	gap: 1rem 2rem
 	align-items: center
-	input
+	input, select
 		font-size: 1.25rem
 	@include mobile
 		grid-template-columns: 1fr

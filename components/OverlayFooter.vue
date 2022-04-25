@@ -1,11 +1,13 @@
 <template>
 	<footer :class="{ home: isHome }">
 		<div :class="{ 'social-links': true, inverted: isHome }">
-			<a href="https://www.facebook.com/fokusberufsbildung"
+			<a target="_blank" href="https://www.facebook.com/fokusberufsbildung"
 				><img class="icon-large" src="/icons/icon_facebook.svg" alt=""
 			/></a>
-			<a href="https://twitter.com/fokusBB"><img class="icon-large" src="/icons/icon_twitter.svg" alt=""/></a>
-			<a href="https://www.linkedin.com/company/fokus-berufsbildung/"
+			<a target="_blank" href="https://twitter.com/fokusBB"
+				><img class="icon-large" src="/icons/icon_twitter.svg" alt=""
+			/></a>
+			<a target="_blank" href="https://www.linkedin.com/company/fokus-berufsbildung/"
 				><img class="icon-large" src="/icons/icon_linkedin.svg" alt=""
 			/></a>
 		</div>

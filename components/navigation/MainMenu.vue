@@ -5,17 +5,17 @@
 		</span>
 		<nav :class="{ inverted: isHome, opened: menuOpen }" @mouseleave="menuOpen = false" @click="menuOpen = false">
 			<transition-group name="menuitems">
-				<nuxt-link v-if="menuOpen" key="1" to="/programm">
-					Fokus 2021
-				</nuxt-link>
 				<nuxt-link v-if="menuOpen" key="2" to="/informationen">
 					Informationen
 				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="3" to="/experten">
-					Expert*innen
+				<nuxt-link v-if="menuOpen" key="3" to="/informationen/teilnahme">
+					Teilnahme
 				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="4" to="/organisation">
+				<!-- <nuxt-link v-if="menuOpen" key="4" to="/organisation">
 					Organisation
+				</nuxt-link> -->
+				<nuxt-link v-if="menuOpen" key="1" to="/2021">
+					Fokus 2021
 				</nuxt-link>
 			</transition-group>
 		</nav>
@@ -76,7 +76,7 @@ nav
 		font-size: 2rem
 		text-align: right
 		padding: .5rem
-		&.nuxt-link-active
+		&.nuxt-link-exact-active
 			color: $c-red
 		&:hover
 			transition: padding-right 200ms
