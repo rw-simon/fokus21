@@ -2,26 +2,18 @@
 	<div class="wrapper">
 		<div class="container">
 			<h1>Teilnahme 2022</h1>
-			<p style="font-weight: bold; font-size:1.5rem">
+			<p style="font-weight: bold; font-size: 1.5rem">
 				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
 			</p>
-			<p>
-				Vorteile:
-			</p>
+			<p>Vorteile:</p>
 			<ul>
-				<li>
-					Platz gesichert
-				</li>
-				<li>
-					Vorreserervirungsrecht Workshop
-				</li>
-				<li>
-					Laufend Infos und Updates
-				</li>
+				<li>Platz gesichert</li>
+				<li>Vorreserervirungsrecht Workshop</li>
+				<li>Laufend Infos und Updates</li>
 			</ul>
 			<p>
-				Melden Sie sich bereits jetzt unverbindlich für die erste Ausgabe von Fokus Berufsbildung an! Damit
+				Melden Sie sich bereits jetzt unverbindlich für die zweite Ausgabe von Fokus Berufsbildung an! Damit
 				haben Sie Ihren Platz am Event auf sicher und Sie kommen in den Genuss des exklusiven
 				Vorreservierungsrechts bei unserem Workshopangebot. Ausserdem halten wir Sie bezüglich News, Programm
 				und Details des Anlasses laufend up-to-date..
@@ -34,7 +26,7 @@
 					<option value="" disabled selected>Anrede</option>
 					<option value="Herr">Herr</option>
 					<option value="Frau">Frau</option>
-					<option value="Andere">Andere</option> </select
+					<option value="Andere">Andere</option></select
 				><span></span>
 				<input type="text" placeholder="Vorname" v-model="vorname" required />
 				<input type="text" placeholder="Name" v-model="name" required />
@@ -62,7 +54,7 @@ export default {
 			vorname: '',
 			tel: '',
 			unternehmen: '',
-			anrede: ''
+			anrede: '',
 		}
 	},
 	methods: {
@@ -75,8 +67,8 @@ export default {
 					// bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für Fokus 21',
-						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
-					}
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`,
+					},
 				})
 				.then(() => {
 					this.register()
@@ -84,15 +76,15 @@ export default {
 		},
 		register() {
 			let v = this
-			setTimeout(function() {
+			setTimeout(function () {
 				v.registered = true
 				console.log('registered')
 			}, 1000)
-		}
+		},
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Teilnahme')
-	}
+	},
 }
 </script>
 
