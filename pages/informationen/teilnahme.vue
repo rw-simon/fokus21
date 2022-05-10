@@ -6,6 +6,12 @@
 				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
 			</p>
+			<p>
+				<strong
+					>Datum: 4. Oktober 2022<br />Ort:
+					<a href="https://kongresszentrum-parkarena.ch/" target="_blank">Parkarena Winterthur</a></strong
+				>
+			</p>
 			<p>Vorteile:</p>
 			<ul>
 				<li>Platz gesichert</li>
@@ -54,7 +60,7 @@ export default {
 			vorname: '',
 			tel: '',
 			unternehmen: '',
-			anrede: '',
+			anrede: ''
 		}
 	},
 	methods: {
@@ -67,8 +73,8 @@ export default {
 					// bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für Fokus 21',
-						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`,
-					},
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
+					}
 				})
 				.then(() => {
 					this.register()
@@ -76,15 +82,15 @@ export default {
 		},
 		register() {
 			let v = this
-			setTimeout(function () {
+			setTimeout(function() {
 				v.registered = true
 				console.log('registered')
 			}, 1000)
-		},
+		}
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Teilnahme')
-	},
+	}
 }
 </script>
 

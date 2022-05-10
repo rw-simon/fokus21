@@ -4,13 +4,13 @@
 			<div class="page-title">
 				<div class="inner-title">
 					<h1><span>Fokus</span><span>Berufsbildung</span></h1>
-					<h2>4. Oktober 2022</h2>
+					<h2>4. Oktober 2022 | Parkarena Winterthur</h2>
 				</div>
 			</div>
 		</div>
 		<div class="anmelden">
 			<nuxt-link to="/informationen/teilnahme"
-				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt="" /></span
+				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
 			></nuxt-link>
 		</div>
 	</div>
@@ -21,7 +21,7 @@ export default {
 	name: 'index',
 	head() {
 		return {
-			title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont',
+			title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont'
 		}
 	},
 	data() {
@@ -29,7 +29,7 @@ export default {
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', '')
-	},
+	}
 }
 </script>
 
