@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<div class="container">
-			<h1>Teilnahme 2022</h1>
+			<h1>Registration Teilnahme 2022</h1>
 			<p style="font-weight: bold; font-size: 1.5rem">
 				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
@@ -15,7 +15,7 @@
 			<p>Vorteile:</p>
 			<ul>
 				<li>Platz gesichert</li>
-				<li>Vorreserervirungsrecht Workshop</li>
+				<li>Vorreserervierungsrecht Workshop</li>
 				<li>Laufend Infos und Updates</li>
 			</ul>
 			<p>
