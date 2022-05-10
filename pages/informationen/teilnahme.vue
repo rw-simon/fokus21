@@ -15,7 +15,7 @@
 			<p>Vorteile:</p>
 			<ul>
 				<li>Platz gesichert</li>
-				<li>Vorreserervierungsrecht Workshop</li>
+				<li>Vorreservierungsrecht Workshop</li>
 				<li>Laufend Infos und Updates</li>
 			</ul>
 			<p>
@@ -60,7 +60,7 @@ export default {
 			vorname: '',
 			tel: '',
 			unternehmen: '',
-			anrede: ''
+			anrede: '',
 		}
 	},
 	methods: {
@@ -73,8 +73,8 @@ export default {
 					// bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für Fokus 21',
-						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
-					}
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`,
+					},
 				})
 				.then(() => {
 					this.register()
@@ -82,15 +82,15 @@ export default {
 		},
 		register() {
 			let v = this
-			setTimeout(function() {
+			setTimeout(function () {
 				v.registered = true
 				console.log('registered')
 			}, 1000)
-		}
+		},
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Teilnahme')
-	}
+	},
 }
 </script>
 
