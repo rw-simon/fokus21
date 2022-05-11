@@ -9,7 +9,8 @@
 			<p>
 				<strong
 					>Datum: 4. Oktober 2022<br />Ort:
-					<a href="https://kongresszentrum-parkarena.ch/" target="_blank">Parkarena Winterthur</a></strong
+					<a href="https://kongresszentrum-parkarena.ch/" target="_blank">Parkarena Winterthur</a
+					><br />Teilnahmegebühr: CHF 250.–</strong
 				>
 			</p>
 			<p>Vorteile:</p>
