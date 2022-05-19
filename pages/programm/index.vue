@@ -130,7 +130,9 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">13:05</h3>
-								<h2>Lebenskompetenz schl&auml;gt Intelligenz</h2>
+								<nuxt-link to="/programm/lebenskompetenz-schlaegt-intelligenz"
+									><h2>Lebenskompetenz schl&auml;gt Intelligenz</h2></nuxt-link
+								>
 								<div class="details">
 									<p>Referentin</p>
 									<div>
@@ -182,9 +184,12 @@
 									<nuxt-link to="/experten/stefan-meienberg">Stefan Meienberg</nuxt-link>
 								</div>
 								<div class="workshop">
-									<h3>
-										Jugendliche in die Berufsbildung begleiten – diese Investition lohnt sich!
-									</h3>
+									<nuxt-link
+										to="/programm/jugendliche-in-die-berufswelt-begleiten-diese-investition-lohnt-sich"
+										><h3>
+											Jugendliche in die Berufsbildung begleiten – diese Investition lohnt sich!
+										</h3></nuxt-link
+									>
 									<nuxt-link to="/experten/ruedi-ernst">Ruedi Ernst</nuxt-link>
 								</div>
 							</div>
