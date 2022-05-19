@@ -2,7 +2,7 @@
 	<div class="wrapper">
 		<div class="container">
 			<h1>Programm 2022</h1>
-			<a target="_blank" href="#" class="button">Herunterladen</a>
+			<!-- <a target="_blank" href="#" class="button">Herunterladen</a> -->
 			<div style="margin-top: 2rem">
 				<client-only>
 					<div class="swiper-pagination"></div>
@@ -57,11 +57,11 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">09:50</h3>
-								<h2>BB und Lernende im Bühnentanz erleben</h2>
+								<h2>Kreatives auf der B&uuml;hne</h2>
 								<div class="details">
 									<p>Vorf&uuml;hrung</p>
 									<div>
-										<a href="https://musicalfactory.ch/" target="_blank">Musical Factory</a>
+										&Uuml;berraschung
 									</div>
 								</div>
 							</div>
@@ -93,6 +93,13 @@
 										><h3>Berufsbilder im Wandel – die Anforderungen an uns</h3></nuxt-link
 									>
 									<nuxt-link to="/experten/dietmar-eglseder">Dietmar Eglseder</nuxt-link>
+								</div>
+								<div class="workshop">
+									<nuxt-link to="/programm/berufsbilder-im-wandel-die-anforderungen-an-uns"
+										><h3>Labor Berufsbildung – die Berufsbildung weiterdenken</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/jaqueline-schaerli">Jaqueline Sch&auml;rli</nuxt-link>
+									<nuxt-link to="/experten/andrea-ruckstuhl">Andrea Ruckstuhl</nuxt-link>
 								</div>
 								<div class="workshop">
 									<nuxt-link to="/programm/young-talents-lernende-gewinnen"
@@ -176,43 +183,49 @@
 								</div>
 								<div class="workshop">
 									<h3>
-										Ausbilden mit klarem Ziel – was wir von Planzer und einander lernen k&ouml;nnen
+										Jugendliche in die Berufsbildung begleiten – diese Investition lohnt sich!
 									</h3>
-									Simon von Arx
+									<nuxt-link to="/experten/ruedi-ernst">Ruedi Ernst</nuxt-link>
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
-							<div class="panel">
+							<div class="panel pause">
 								<h3 class="time">15:30</h3>
+								<h2>Pause</h2>
+							</div>
+						</swiper-slide>
+						<swiper-slide>
+							<div class="panel">
+								<h3 class="time">15:50</h3>
 								<h2>
 									Anhand der digitalen Plattform den gemeinsamen Lernprozess reflektieren
 								</h2>
 								<div class="details">
 									<p>Referent</p>
 									<div>
-										<nuxt-link to="/experten/nicole-fritschi">Nicole Fritschi</nuxt-link>
+										<nuxt-link to="/experten/simon-hausammann">Simon Hausammann</nuxt-link>
 									</div>
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">15:45</h3>
+								<h3 class="time">16:10</h3>
 								<h2>
-									BB und Lernende aus dem Instrumentenbau erleben
+									Kreatives auf der B&uuml;hne
 								</h2>
 								<div class="details">
-									<p>Referent</p>
+									<p>Vorf&uuml;hrung</p>
 									<div>
-										<a href="https://musicalfactory.ch/" target="_blank">Musical Factory</a>
+										&Uuml;berraschung
 									</div>
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">16:00</h3>
+								<h3 class="time">16:25</h3>
 								<h2>Abschluss & Ausblick 2023</h2>
 								<div class="details">
 									<p>Referent</p>
@@ -220,6 +233,12 @@
 										<nuxt-link to="/experten/nicole-fritschi">Nicole Fritschi</nuxt-link>
 									</div>
 								</div>
+							</div>
+						</swiper-slide>
+						<swiper-slide>
+							<div class="panel">
+								<h3 class="time">Anschliessend</h3>
+								<h2>Apéro</h2>
 							</div>
 						</swiper-slide>
 						<swiper-slide></swiper-slide>

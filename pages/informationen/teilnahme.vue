@@ -23,7 +23,7 @@
 				Melden Sie sich bereits jetzt unverbindlich für die zweite Ausgabe von Fokus Berufsbildung an! Damit
 				haben Sie Ihren Platz am Event auf sicher und Sie kommen in den Genuss des exklusiven
 				Vorreservierungsrechts bei unserem Workshopangebot. Ausserdem halten wir Sie bezüglich News, Programm
-				und Details des Anlasses laufend up-to-date..
+				und Details des Anlasses laufend up-to-date.
 			</p>
 			<hr />
 			<strong v-html="registered ? 'Danke für Ihre Anmeldung!' : 'Jetzt unverbindlich registrieren!'" /><br />
@@ -61,7 +61,7 @@ export default {
 			vorname: '',
 			tel: '',
 			unternehmen: '',
-			anrede: '',
+			anrede: ''
 		}
 	},
 	methods: {
@@ -74,8 +74,8 @@ export default {
 					// bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für Fokus 21',
-						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`,
-					},
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
+					}
 				})
 				.then(() => {
 					this.register()
@@ -83,15 +83,15 @@ export default {
 		},
 		register() {
 			let v = this
-			setTimeout(function () {
+			setTimeout(function() {
 				v.registered = true
 				console.log('registered')
 			}, 1000)
-		},
+		}
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Teilnahme')
-	},
+	}
 }
 </script>
 
