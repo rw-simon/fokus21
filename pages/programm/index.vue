@@ -95,7 +95,7 @@
 									<nuxt-link to="/experten/dietmar-eglseder">Dietmar Eglseder</nuxt-link>
 								</div>
 								<div class="workshop">
-									<nuxt-link to="/programm/berufsbilder-im-wandel-die-anforderungen-an-uns"
+									<nuxt-link to="/programm/labor-berufsbildung-die-berufsbildung-weiterdenken"
 										><h3>Labor Berufsbildung – die Berufsbildung weiterdenken</h3></nuxt-link
 									>
 									<nuxt-link to="/experten/jaqueline-schaerli">Jaqueline Sch&auml;rli</nuxt-link>
@@ -276,7 +276,7 @@ export default {
 		}
 	}),
 	mounted() {
-		this.$store.commit('pagetitle/change', 'Programm 2021')
+		this.$store.commit('pagetitle/change', 'Programm 2022')
 	}
 }
 </script>
