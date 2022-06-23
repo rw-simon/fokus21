@@ -77,48 +77,64 @@
 									<input
 										type="radio"
 										name="workshopmorgen"
-										value="Entdeckendes Lernen"
+										value="KV Reform 2023 - wo stehen wir"
 										v-model="selectedWorkshop[0]"
 									/>
 									<div class="content">
-										<h4>Entdeckendes Lernen</h4>
-										<nuxt-link to="/programm/entdeckendes-lernen">Infos</nuxt-link>
+										<h4>KV Reform 2023 - wo stehen wir</h4>
+										<nuxt-link to="/programm/kv-reform-2023-wo-stehen-wir">Infos</nuxt-link>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopmorgen"
-										value="Wenn Lernende das Zepter übernehmen"
+										value="n47e8 – so lernen wir!"
 										v-model="selectedWorkshop[0]"
 									/>
 									<div class="content">
-										<h4>Wenn Lernende das Zepter übernehmen</h4>
-										<nuxt-link to="/programm/wenn-lernende-das-zepter-uebernehmen">Infos</nuxt-link>
+										<h4>n47e8 – so lernen wir!</h4>
+										<nuxt-link to="/programm/n47e8-so-lernen-wir">Infos</nuxt-link>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopmorgen"
-										value="Mit Sol unterwegs"
+										value="Berufsbilder im Wandel - die Anforderungen an uns"
 										v-model="selectedWorkshop[0]"
 									/>
 									<div class="content">
-										<h4>Mit Sol unterwegs</h4>
-										<nuxt-link to="/programm/mit-sol-unterwegs">Infos</nuxt-link>
+										<h4>Berufsbilder im Wandel - die Anforderungen an uns</h4>
+										<nuxt-link to="/programm/berufsbilder-im-wandel-die-anforderungen-an-uns"
+											>Infos</nuxt-link
+										>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopmorgen"
-										value="Schule im Jahr 2021"
+										value="Labor Berufsbildung - die Berufsbildung weiterdenken"
 										v-model="selectedWorkshop[0]"
 									/>
 									<div class="content">
-										<h4>Schule im Jahr 2021</h4>
-										<nuxt-link to="/programm/schule-im-jahr-2020">Infos</nuxt-link>
+										<h4>Labor Berufsbildung - die Berufsbildung weiterdenken</h4>
+										<nuxt-link to="/programm/labor-berufsbildung-die-berufsbildung-weiterdenken"
+											>Infos</nuxt-link
+										>
+									</div>
+								</article>
+								<article>
+									<input
+										type="radio"
+										name="workshopmorgen"
+										value="Young Talents - Lernende gewinnen"
+										v-model="selectedWorkshop[0]"
+									/>
+									<div class="content">
+										<h4>Young Talents - Lernende gewinnen</h4>
+										<nuxt-link to="/programm/young-talents-lernende-gewinnen">Infos</nuxt-link>
 									</div>
 								</article>
 							</div>
@@ -128,51 +144,62 @@
 									<input
 										type="radio"
 										name="workshopnachmittag"
-										value="Challenge Lernen – ADS"
+										value="Die 4 K's - Lernende motivieren"
 										v-model="selectedWorkshop[1]"
 									/>
 									<div class="content">
-										<h4>Challenge Lernen – ADS</h4>
-										<nuxt-link to="/programm/challenge-lernen-ads">Infos</nuxt-link>
+										<h4>Die 4 K's - Lernende motivieren</h4>
+										<nuxt-link to="/programm/die-4-ks-lernende-motivieren">Infos</nuxt-link>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopnachmittag"
-										value="Mental Fit"
+										value="Unsere Rollen - vielfältig, interessant und doch im Spannungsfeld"
 										v-model="selectedWorkshop[1]"
 									/>
 									<div class="content">
-										<h4>Mental Fit</h4>
-										<nuxt-link to="/programm/mental-fit">Infos</nuxt-link>
+										<h4>Unsere Rollen - vielfältig, interessant und doch im Spannungsfeld</h4>
+										<nuxt-link
+											to="/programm/unsere-rollen-vielfaeltig-interessant-und-doch-im-spannungsfeld"
+											>Infos</nuxt-link
+										>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopnachmittag"
-										value="Von der Berufsweltmeisterin lernen"
+										value="Erfolgreiches Coachen - die Adaption in den Berufsbildungsalltag"
 										v-model="selectedWorkshop[1]"
 									/>
 									<div class="content">
-										<h4>Von der Berufsweltmeisterin lernen</h4>
-										<nuxt-link to="/programm/von-der-berufsweltmeisterin-lernen">Infos</nuxt-link>
+										<h4>Erfolgreiches Coachen - die Adaption in den Berufsbildungsalltag</h4>
+										<nuxt-link
+											to="/programm/erfolgreiches-coachen-die-adaption-in-den-berufsbildungsalltag"
+											>Infos</nuxt-link
+										>
 									</div>
 								</article>
 								<article>
 									<input
 										type="radio"
 										name="workshopnachmittag"
-										value="Selbstorganisiertes Lernen"
+										value="Jugentliche in die Berufsbildung begleiten - diese Investition lohnt sich"
 										v-model="selectedWorkshop[1]"
 									/>
 									<div class="content">
-										<h4>Selbstorganisiertes Lernen</h4>
-										<nuxt-link to="/programm/selbstorganisiertes-lernen">Infos</nuxt-link>
+										<h4>
+											Jugentliche in die Berufsbildung begleiten - diese Investition lohnt sich
+										</h4>
+										<nuxt-link
+											to="/programm/jugendliche-in-die-berufswelt-begleiten-diese-investition-lohnt-sich"
+											>Infos</nuxt-link
+										>
 									</div>
 								</article>
-								<article>
+								<!-- <article>
 									<input
 										type="radio"
 										name="workshopnachmittag"
@@ -183,7 +210,7 @@
 										<h4>Psychische Gesundheit</h4>
 										<nuxt-link to="/programm/psychische-gesundheit">Infos</nuxt-link>
 									</div>
-								</article>
+								</article> -->
 							</div>
 						</div>
 						<hr />
@@ -231,8 +258,8 @@
 						</div>
 						<hr />
 						<div>
-							<h3>Fokus Berufsbildung 2021: Lernen – ein breiter Horizont</h3>
-							<p>Datum: 24. Juni 2020 <br />Ort: Online – live aus der Parkarena Winterthur</p>
+							<h3>Fokus Berufsbildung 2022: Lernen – ein breiter Horizont</h3>
+							<p>Datum: 4. Oktober 2022 <br />Ort: Parkarena Winterthur</p>
 							<p>Kosten: CHF 250.–</p>
 						</div>
 						<hr />
@@ -262,7 +289,7 @@
 <script>
 export default {
 	head: {
-		title: 'Jetzt anmelden | Fokus Berufsbildung 2021'
+		title: 'Jetzt anmelden | Fokus Berufsbildung 2022',
 	},
 	data: () => ({
 		step: 1,
@@ -273,22 +300,22 @@ export default {
 				street: '',
 				nr: '',
 				plz: '',
-				city: ''
+				city: '',
 			},
 			phone: '',
 			email: '',
 			firma: { name: '' },
-			birthday: ''
+			birthday: '',
 		},
 		errorMsg: '',
 		selectedWorkshop: ['', ''],
-		acceptedAgb: false
+		acceptedAgb: false,
 	}),
 	mounted() {
 		let userDocument = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
 		userDocument
 			.get()
-			.then(doc => {
+			.then((doc) => {
 				if (doc.exists) {
 					let mergedUserDocument = { ...this.accountDetail, ...doc.data() }
 					this.$fire.firestore
@@ -300,7 +327,7 @@ export default {
 						})
 				}
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.log('Error getting document ', err)
 			})
 		//////////////////////////////////////////
@@ -312,7 +339,7 @@ export default {
 				.collection('mail')
 				.doc('confirmation_' + this.$store.state.users.user.email + Date.now().toString())
 				.set({
-					to: ['info@fokus-berufsbildung.ch'], //this.$store.state.users.user.email.toString(),
+					to: ['admin@rechtwinklig.ch'], //this.$store.state.users.user.email.toString(),
 					bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für den 24. Juni',
@@ -327,8 +354,8 @@ export default {
 						<h2>Workshops</h2>
 						<p><span style="font-weight: bold;">Morgen: </span>${this.selectedWorkshop[0]}</p>
 						<p><span style="font-weight: bold;">Nachmittag: </span>${this.selectedWorkshop[1]}</p>
-						`
-					}
+						`,
+					},
 				})
 		},
 		sendMail() {
@@ -347,22 +374,22 @@ export default {
 							' ' +
 							this.accountDetail.nachname +
 							' –– ' +
-							'Vielen Dank für Ihre Teilnahme am Event "Fokus Berufsbildung 2021: Lernen – ein breiter Horizont". Gerne bestätigen wir hiermit den Kauf Ihres Tickets. Die Rechnung werden wir Ihnen in einem separaten Mail zustellen. –– Mehr Details zum Event finden Sie in auf unserer Webseite fokus-berufsbildung.ch. –– Wir freuen uns auf Sie! Ihr Fokus-Berufsbildung Team!',
+							'Vielen Dank für Ihre Teilnahme am Event "Fokus Berufsbildung 2022: Lernen – ein breiter Horizont". Gerne bestätigen wir hiermit den Kauf Ihres Tickets. Die Rechnung werden wir Ihnen in einem separaten Mail zustellen. –– Mehr Details zum Event finden Sie in auf unserer Webseite fokus-berufsbildung.ch. –– Wir freuen uns auf Sie! Ihr Fokus-Berufsbildung Team!',
 						html:
 							'<p>Grüezi ' +
 							this.accountDetail.vorname +
 							' ' +
 							this.accountDetail.nachname +
-							'</p><br /><p>Vielen Dank für Ihre Teilnahme am Event <strong>"Fokus Berufsbildung 2021: Lernen – ein breiter Horizont"</strong>.<p></p>Gerne bestätigen wir hiermit den Kauf Ihres Tickets. Die Rechnung werden wir Ihnen in einem separaten Mail zustellen.</p><hr /><p>Mehr Details zum Event finden Sie in auf unserer Webseite <a href="https://www.fokus-berufsbildung.ch" target="_blank">www.fokus-berufsbildung.ch</a>.</p><br /><p><strong>Wir freuen uns auf Sie!</strong></p><img style="width: 220px" src="https://admin.fokus21.rwdev.ch/wp-content/uploads/2021/06/logo_color.png" /><p>Ihr Fokus-Berufsbildung Team!</p>'
-					}
+							'</p><br /><p>Vielen Dank für Ihre Teilnahme am Event <strong>"Fokus Berufsbildung 2022: Lernen – ein breiter Horizont"</strong>.<p></p>Gerne bestätigen wir hiermit den Kauf Ihres Tickets. Die Rechnung werden wir Ihnen in einem separaten Mail zustellen.</p><hr /><p>Mehr Details zum Event finden Sie in auf unserer Webseite <a href="https://www.fokus-berufsbildung.ch" target="_blank">www.fokus-berufsbildung.ch</a>.</p><br /><p><strong>Wir freuen uns auf Sie!</strong></p><img style="width: 220px" src="https://admin.fokus21.rwdev.ch/wp-content/uploads/2021/06/logo_color.png" /><p>Ihr Fokus-Berufsbildung Team!</p>',
+					},
 				})
-				.catch(err => {
+				.catch((err) => {
 					console.log('Error getting document ', err)
 				})
 		},
 		addAddressData() {
 			let userRef = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
-			userRef.get().then(doc => {
+			userRef.get().then((doc) => {
 				if (!doc.exists) {
 				} else {
 					this.$fire.firestore
@@ -373,10 +400,10 @@ export default {
 								street: this.accountDetail.address.street,
 								nr: this.accountDetail.address.nr,
 								plz: this.accountDetail.address.plz,
-								city: this.accountDetail.address.city
+								city: this.accountDetail.address.city,
 							},
 							phone: this.accountDetail.phone,
-							firma: { name: this.accountDetail.firma.name }
+							firma: { name: this.accountDetail.firma.name },
 						})
 				}
 			})
@@ -399,7 +426,7 @@ export default {
 		},
 		addWorkshopData() {
 			let userRef = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
-			userRef.get().then(doc => {
+			userRef.get().then((doc) => {
 				if (!doc.exists) {
 				} else {
 					this.$fire.firestore
@@ -408,8 +435,8 @@ export default {
 						.update({
 							workshops: {
 								morning: this.selectedWorkshop[0],
-								afternoon: this.selectedWorkshop[1]
-							}
+								afternoon: this.selectedWorkshop[1],
+							},
 						})
 				}
 			})
@@ -443,7 +470,7 @@ export default {
 		},
 		completeOrder() {
 			let userRef = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
-			userRef.get().then(doc => {
+			userRef.get().then((doc) => {
 				if (!doc.exists) {
 				} else {
 					this.$fire.firestore
@@ -451,15 +478,15 @@ export default {
 						.doc(this.$store.state.users.user.uid)
 						.update({
 							ticket: {
-								bought: true
-							}
+								bought: true,
+							},
 						})
 				}
 			})
 			this.sendMail()
 			this.$router.push('/user/dashboard')
-		}
-	}
+		},
+	},
 }
 </script>
 

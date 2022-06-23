@@ -1,25 +1,26 @@
 <template>
 	<div class="wrapper">
 		<div class="container">
-			<h1>Registration Teilnahme 2022</h1>
+			<h1>Registration 2022</h1>
 			<p style="font-weight: bold; font-size: 1.5rem">
 				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
 			</p>
 			<p>
-				<strong
-					>Datum: 4. Oktober 2022<br />Ort:
-					<a href="https://kongresszentrum-parkarena.ch/" target="_blank">Parkarena Winterthur</a
-					><br />Teilnahmegebühr: CHF 250.–</strong
-				>
+				Datum: 4. Oktober 2022<br />Ort:
+				<a href="https://kongresszentrum-parkarena.ch/" target="_blank">Parkarena Winterthur</a
+				><br />Teilnahmegebühr: CHF 250.–
 			</p>
-			<p>Vorteile:</p>
+			<hr />
+			<h3>Die Anmeldung ist ab sofort in Ihrem Benutzerkonto verfügbar!</h3>
+			<nuxt-link class="button button-red" to="/user/login">Zum Login</nuxt-link>
+			<!-- <p>Vorteile:</p>
 			<ul>
 				<li>Platz gesichert</li>
 				<li>Vorreservierungsrecht Workshop</li>
 				<li>Laufend Infos und Updates</li>
-			</ul>
-			<p>
+			</ul> -->
+			<!-- <p>
 				Melden Sie sich bereits jetzt unverbindlich für die zweite Ausgabe von Fokus Berufsbildung an! Damit
 				haben Sie Ihren Platz am Event auf sicher und Sie kommen in den Genuss des exklusiven
 				Vorreservierungsrechts bei unserem Workshopangebot. Ausserdem halten wir Sie bezüglich News, Programm
@@ -40,10 +41,10 @@
 				<input type="email" placeholder="Email" v-model="email" required />
 				<input type="text" placeholder="Unternehmen" v-model="unternehmen" required />
 				<input style="cursor: pointer" type="submit" value="Anmelden" />
-			</form>
-			<div v-else>
+			</form> -->
+			<!-- <div v-else>
 				<p v-html="message" />
-			</div>
+			</div> -->
 		</div>
 	</div>
 </template>
@@ -61,7 +62,7 @@ export default {
 			vorname: '',
 			tel: '',
 			unternehmen: '',
-			anrede: ''
+			anrede: '',
 		}
 	},
 	methods: {
@@ -74,8 +75,8 @@ export default {
 					// bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für Fokus 21',
-						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`
-					}
+						html: `${this.anrede} Name ${this.vorname} ${this.name}<br />Email ${this.email}<br />Firma ${this.unternehmen}<br />`,
+					},
 				})
 				.then(() => {
 					this.register()
@@ -83,15 +84,15 @@ export default {
 		},
 		register() {
 			let v = this
-			setTimeout(function() {
+			setTimeout(function () {
 				v.registered = true
 				console.log('registered')
 			}, 1000)
-		}
+		},
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Teilnahme')
-	}
+	},
 }
 </script>
 

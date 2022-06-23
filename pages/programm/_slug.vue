@@ -13,7 +13,7 @@ export default {
 	name: 'programm-slug',
 	head() {
 		return {
-			title: this.event.title.rendered + ' | Fokus Berufsbildung 2021'
+			title: this.event.title.rendered + ' | Fokus Berufsbildung 2022',
 		}
 	},
 	async asyncData({ store, params }) {
@@ -25,9 +25,9 @@ export default {
 			// Return values from store
 		}
 		return {
-			event: store.getters.getEventBySlug(params.slug)
+			event: store.getters.getEventBySlug(params.slug),
 		}
-	}
+	},
 }
 </script>
 <style lang="sass" scoped></style>

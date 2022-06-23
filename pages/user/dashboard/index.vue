@@ -1,6 +1,6 @@
 <template>
 	<div class="wrapper">
-		<pre>{{ user }}</pre>
+		<!-- <pre>{{ user }}</pre> -->
 		<div class="container" v-if="user.vorname">
 			<section class="settings">
 				<!-- <nuxt-link to="/user/einstellungen">Einstellungen</nuxt-link> -->
@@ -33,36 +33,48 @@
 				<div>
 					<div class="panel" v-if="user">
 						<div class="next-event">
-							<h3>24. Juni 2021</h3>
+							<h3>4. Oktober 2022</h3>
 							<h2>Lernen – ein breiter Horizont</h2>
-							<!-- <h3>CHF 250.–</h3> -->
+							<h3>CHF 250.–</h3>
 							<br />
-							<!-- <nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
+							<nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
 								>Jetzt anmelden</nuxt-link
-							> -->
-							<!-- <p v-else>Du bist bereits angemeldet!</p> -->
-							<!-- <nuxt-link v-else class="button button-blue" to="/user/get-ticket"
+							>
+							<p v-else>Du bist bereits angemeldet!</p>
+							<nuxt-link v-else class="button button-blue" to="/user/get-ticket"
 								>Anmeldung ändern</nuxt-link
-							> -->
+							>
 							<nuxt-link to="/programm" class="button button-blue">Programm</nuxt-link>
 							<hr />
 							<div class="event-details">
 								<p>Datum</p>
-								<p>24. Juni 2021</p>
+								<p>4. Oktober 2022</p>
 								<p>Ort</p>
-								<p><span style="font-style: italic;">Online</span> – Live aus der Parkarena</p>
+								<p>Parkarena Winterthur</p>
 							</div>
 							<div class="selectedworkshops" v-if="user.workshops.morning && user.ticket.bought">
 								<hr />
 								<h4>Deine Workshops</h4>
 								<div>
 									<p>
-										<span style="font-size:.75rem;font-weight:bold;display:inline-block;width:100px"
+										<span
+											style="
+												font-size: 0.75rem;
+												font-weight: bold;
+												display: inline-block;
+												width: 100px;
+											"
 											>Morgen: </span
 										><span>{{ user.workshops.morning }}</span>
 									</p>
 									<p>
-										<span style="font-size:.75rem;font-weight:bold;display:inline-block;width:100px"
+										<span
+											style="
+												font-size: 0.75rem;
+												font-weight: bold;
+												display: inline-block;
+												width: 100px;
+											"
 											>Nachmittag: </span
 										><span>{{ user.workshops.afternoon }}</span>
 									</p>
@@ -102,7 +114,7 @@ import Cookie from 'js-cookie'
 export default {
 	name: 'user-dashboard',
 	head: {
-		title: 'Dashboard | Fokus Berufsbildung 2021'
+		title: 'Dashboard | Fokus Berufsbildung 2021',
 	},
 	data() {
 		return {
@@ -114,8 +126,8 @@ export default {
 				email: '',
 				firma: { name: '' },
 				ticket: { bought: false },
-				workshops: { morning: '', afternoon: '' }
-			}
+				workshops: { morning: '', afternoon: '' },
+			},
 		}
 	},
 	mounted() {
@@ -123,7 +135,7 @@ export default {
 		let userDocument = this.$fire.firestore.collection('users').doc(this.$store.state.users.user.uid)
 		userDocument
 			.get()
-			.then(doc => {
+			.then((doc) => {
 				if (doc.exists) {
 					let mergedUserDocument = { ...this.user, ...doc.data() }
 					this.$fire.firestore
@@ -135,7 +147,7 @@ export default {
 						})
 				}
 			})
-			.catch(err => {
+			.catch((err) => {
 				console.log('Error getting document ', err)
 			})
 		///////////////////////////////////////////////////
@@ -146,8 +158,8 @@ export default {
 			await this.$fire.auth.signOut()
 			Cookie.remove('access_token')
 			location.href = '/user/login'
-		}
-	}
+		},
+	},
 }
 </script>
 
@@ -179,7 +191,7 @@ export default {
 		display: inline-block
 .grid
 	display: grid
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 2fr 3fr
 	gap: 4rem
 	align-items: start
 	@include mobile
