@@ -37,7 +37,7 @@
 							<h2>Lernen – ein breiter Horizont</h2>
 							<h3>CHF 250.–</h3>
 							<br />
-							<nuxt-link v-if="!user.ticket.bought" class="button button-red" to="/user/get-ticket"
+							<nuxt-link v-if="!user.ticket2.bought" class="button button-red" to="/user/get-ticket"
 								>Jetzt anmelden</nuxt-link
 							>
 							<p v-else>Du bist bereits angemeldet!</p>
@@ -52,7 +52,7 @@
 								<p>Ort</p>
 								<p>Parkarena Winterthur</p>
 							</div>
-							<div class="selectedworkshops" v-if="user.workshops.morning && user.ticket.bought">
+							<div class="selectedworkshops" v-if="user.workshops2.morning && user.ticket2.bought">
 								<hr />
 								<h4>Deine Workshops</h4>
 								<div>
@@ -65,7 +65,7 @@
 												width: 100px;
 											"
 											>Morgen: </span
-										><span>{{ user.workshops.morning }}</span>
+										><span>{{ user.workshops2.morning }}</span>
 									</p>
 									<p>
 										<span
@@ -76,7 +76,7 @@
 												width: 100px;
 											"
 											>Nachmittag: </span
-										><span>{{ user.workshops.afternoon }}</span>
+										><span>{{ user.workshops2.afternoon }}</span>
 									</p>
 								</div>
 							</div>
@@ -125,8 +125,8 @@ export default {
 				phone: '',
 				email: '',
 				firma: { name: '' },
-				ticket: { bought: false },
-				workshops: { morning: '', afternoon: '' },
+				ticket2: { bought: false },
+				workshops2: { morning: '', afternoon: '' },
 			},
 		}
 	},
@@ -141,8 +141,8 @@ export default {
 					this.$fire.firestore
 						.collection('users')
 						.doc(this.$store.state.users.user.uid)
-						// .update(mergedUserDocument)
-						.update({ 'ticket.bought': false, 'workshops.morning': '', 'workshops.afternoon': '' })
+						.update(mergedUserDocument)
+						// .update({ 'ticket.bought': false, 'workshops.morning': '', 'workshops.afternoon': '' })
 						.then(() => {
 							console.log(mergedUserDocument)
 							this.user = mergedUserDocument
