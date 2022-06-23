@@ -433,7 +433,7 @@ export default {
 						.collection('users')
 						.doc(this.$store.state.users.user.uid)
 						.update({
-							workshops: {
+							workshops2: {
 								morning: this.selectedWorkshop[0],
 								afternoon: this.selectedWorkshop[1],
 							},
@@ -477,7 +477,7 @@ export default {
 						.collection('users')
 						.doc(this.$store.state.users.user.uid)
 						.update({
-							ticket: {
+							ticket2: {
 								bought: true,
 							},
 						})
