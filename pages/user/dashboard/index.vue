@@ -141,8 +141,10 @@ export default {
 					this.$fire.firestore
 						.collection('users')
 						.doc(this.$store.state.users.user.uid)
-						.update(mergedUserDocument)
+						// .update(mergedUserDocument)
+						.update({ 'ticket.bought': false, 'workshops.morning': '', 'workshops.afternoon': '' })
 						.then(() => {
+							console.log(mergedUserDocument)
 							this.user = mergedUserDocument
 						})
 				}
