@@ -339,7 +339,7 @@ export default {
 				.collection('mail')
 				.doc('confirmation_' + this.$store.state.users.user.email + Date.now().toString())
 				.set({
-					to: ['admin@rechtwinklig.ch'], //this.$store.state.users.user.email.toString(),
+					to: ['info@kfmv-winterthur.ch'], //this.$store.state.users.user.email.toString(),
 					bcc: ['admin@rechtwinklig.ch'],
 					message: {
 						subject: 'Neue Anmeldung für den 24. Juni',
