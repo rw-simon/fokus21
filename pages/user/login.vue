@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="login-panel">
 				<h1>Login</h1>
-				<h3>Melde dich jetzt an, um am Event am 24. Juni teilzunehmen!</h3>
+				<h3>Melde dich jetzt an, um am Event am 4. Oktober teilzunehmen!</h3>
 				<hr />
 				<form @submit.prevent="login" class="login">
 					<input type="email" required v-model="account.email" class="full" placeholder="Email" />
@@ -28,7 +28,7 @@
 <script>
 export default {
 	head: {
-		title: 'Login | Fokus Berusfsbildung 2021',
+		title: 'Login | Fokus Berusfsbildung 2022',
 	},
 	data() {
 		return {
