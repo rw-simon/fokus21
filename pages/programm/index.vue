@@ -34,9 +34,7 @@
 								<h2>Die Bildungsstadt Winterthur gr&uuml;sst</h2>
 								<div class="details">
 									<p>Referent</p>
-									<div>
-										Michael K&uuml;nzle
-									</div>
+									<div>Michael K&uuml;nzle</div>
 								</div>
 							</div>
 						</swiper-slide>
@@ -60,9 +58,7 @@
 								<h2>Kreatives auf der B&uuml;hne</h2>
 								<div class="details">
 									<p>Vorf&uuml;hrung</p>
-									<div>
-										&Uuml;berraschung
-									</div>
+									<div>&Uuml;berraschung</div>
 								</div>
 							</div>
 						</swiper-slide>
@@ -135,9 +131,7 @@
 								>
 								<div class="details">
 									<p>Referentin</p>
-									<div>
-										Margrit Stamm
-									</div>
+									<div>Margrit Stamm</div>
 								</div>
 							</div>
 						</swiper-slide>
@@ -192,6 +186,15 @@
 									>
 									<nuxt-link to="/experten/ruedi-ernst">Ruedi Ernst</nuxt-link>
 								</div>
+								<div class="workshop">
+									<nuxt-link
+										to="/programm/herausforderungen-im-berufsbildungsalltag-loesungen-suchen-loesungen-finden"
+										><h3>
+											Herausforderungen im Berufsbildungsalltag - Lösungen suchen, Lösungen finden
+										</h3></nuxt-link
+									>
+									<nuxt-link to="/experten/manuela-cubreli">Manuela Cubreli</nuxt-link>
+								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
@@ -203,9 +206,7 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">15:50</h3>
-								<h2>
-									Anhand der digitalen Plattform den gemeinsamen Lernprozess reflektieren
-								</h2>
+								<h2>Anhand der digitalen Plattform den gemeinsamen Lernprozess reflektieren</h2>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -217,14 +218,10 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">16:10</h3>
-								<h2>
-									Kreatives auf der B&uuml;hne
-								</h2>
+								<h2>Kreatives auf der B&uuml;hne</h2>
 								<div class="details">
 									<p>Vorf&uuml;hrung</p>
-									<div>
-										&Uuml;berraschung
-									</div>
+									<div>&Uuml;berraschung</div>
 								</div>
 							</div>
 						</swiper-slide>
@@ -258,7 +255,7 @@
 export default {
 	name: '2021',
 	head: {
-		title: 'Programm | Fokus Berufsbildung 2022'
+		title: 'Programm | Fokus Berufsbildung 2022',
 	},
 	data: () => ({
 		swiperOption: {
@@ -269,20 +266,20 @@ export default {
 			direction: 'horizontal',
 			pagination: {
 				el: '.swiper-pagination',
-				type: 'progressbar'
+				type: 'progressbar',
 			},
 			breakpoints: {
 				960: {
 					slidesPerView: 2.2,
 					freeMode: true,
-					pagination: false
-				}
-			}
-		}
+					pagination: false,
+				},
+			},
+		},
 	}),
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Programm 2022')
-	}
+	},
 }
 </script>
 
