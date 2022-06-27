@@ -191,10 +191,27 @@
 									/>
 									<div class="content">
 										<h4>
-											Jugentliche in die Berufsbildung begleiten - diese Investition lohnt sich
+											Jugendliche in die Berufsbildung begleiten - diese Investition lohnt sich
 										</h4>
 										<nuxt-link
 											to="/programm/jugendliche-in-die-berufswelt-begleiten-diese-investition-lohnt-sich"
+											>Infos</nuxt-link
+										>
+									</div>
+								</article>
+								<article>
+									<input
+										type="radio"
+										name="workshopnachmittag"
+										value="Herausforderungen im Berufsbildungsalltag - Lösungen suchen, Lösungen finden"
+										v-model="selectedWorkshop[1]"
+									/>
+									<div class="content">
+										<h4>
+											Herausforderungen im Berufsbildungsalltag - Lösungen suchen, Lösungen finden
+										</h4>
+										<nuxt-link
+											to="/programm/herausforderungen-im-berufsbildungsalltag-loesungen-suchen-loesungen-finden"
 											>Infos</nuxt-link
 										>
 									</div>
