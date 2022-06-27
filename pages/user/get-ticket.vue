@@ -239,7 +239,7 @@
 							einverstanden bist.
 						</p>
 						<div>
-							<nuxt-link to="informationen/allgemeine-geschaeftsbedingungen"
+							<nuxt-link to="/informationen/allgemeine-geschaeftsbedingungen"
 								><h3>Teilnahmebedingungen</h3></nuxt-link
 							>
 							<input type="checkbox" v-model="acceptedAgb" name="acceptagb" id="acceptagb" /><label
