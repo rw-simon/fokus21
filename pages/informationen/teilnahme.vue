@@ -1,7 +1,7 @@
 <template>
 	<div class="wrapper">
 		<div class="container">
-			<h1>Registration 2022</h1>
+			<h1>Anmeldung 2022</h1>
 			<p style="font-weight: bold; font-size: 1.5rem">
 				Lernen – ein breiter Horizont; es warten spannende Impulsreferate von erfahrenen Experten, eine breite
 				Palette an gewinnbringenden Workshops und ein abgestimmtes Rahmenprogramm auf Sie.
@@ -12,8 +12,16 @@
 				><br />Teilnahmegebühr: CHF 250.–
 			</p>
 			<hr />
-			<h3>Die Anmeldung ist ab sofort in Ihrem Benutzerkonto verfügbar!</h3>
-			<nuxt-link class="button button-red" to="/user/login">Zum Login</nuxt-link>
+			<div class="login-buttons">
+				<div>
+					<h3>Jetzt neu anmelden!</h3>
+					<nuxt-link class="button button-red" to="/user/register">Zur Anmeldung</nuxt-link>
+				</div>
+				<div>
+					<h3>Sie sind bereits registriert?</h3>
+					<nuxt-link class="button button-gray" to="/user/login">Zum Login</nuxt-link>
+				</div>
+			</div>
 			<!-- <p>Vorteile:</p>
 			<ul>
 				<li>Platz gesichert</li>
@@ -97,6 +105,15 @@ export default {
 </script>
 
 <style <style lang="sass" scoped>
+.login-buttons
+	display: grid
+	gap: 2rem
+	grid-template-columns: 1fr 1fr
+	@include mobile
+		grid-template-columns: 1fr
+		.button
+			width: 100%
+			text-align: center
 .register
 	display: grid
 	grid-template-columns: 1fr 1fr
