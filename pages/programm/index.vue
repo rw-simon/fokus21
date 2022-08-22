@@ -268,8 +268,13 @@ export default {
 				type: 'progressbar',
 			},
 			breakpoints: {
+				1200: {
+					slidesPerView: 2.7,
+					freeMode: true,
+					pagination: false,
+				},
 				960: {
-					slidesPerView: 2.2,
+					slidesPerView: 1.7,
 					freeMode: true,
 					pagination: false,
 				},
