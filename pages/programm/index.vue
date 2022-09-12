@@ -2,7 +2,12 @@
 	<div class="wrapper">
 		<div class="container">
 			<h1>Programm 2022</h1>
-			<!-- <a target="_blank" href="#" class="button">Herunterladen</a> -->
+			<a
+				target="_blank"
+				href="https://admin.fokus21.rwdev.ch/wp-content/uploads/2022/09/tagesprogramm.pdf"
+				class="button"
+				>Herunterladen</a
+			>
 			<div style="margin-top: 2rem">
 				<client-only>
 					<div class="swiper-pagination"></div>
@@ -41,8 +46,18 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">09:20</h3>
+								<h2>Der gemeinsame Lernprozess</h2>
+								<div class="details">
+									<p>Referent</p>
+									<div>Remo Huber</div>
+								</div>
+							</div>
+						</swiper-slide>
+						<swiper-slide>
+							<div class="panel">
+								<h3 class="time">09:40</h3>
 								<nuxt-link to="/programm/die-berufsbildung-staerken"
-									><h2>Die Berufsbildung st&auml;rken</h2></nuxt-link
+									><h2>Gest&auml;rkt aus der Krise</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referent</p>
@@ -52,7 +67,7 @@
 								</div>
 							</div>
 						</swiper-slide>
-						<swiper-slide>
+						<!-- <swiper-slide>
 							<div class="panel">
 								<h3 class="time">09:50</h3>
 								<h2>Kreatives auf der B&uuml;hne</h2>
@@ -61,16 +76,16 @@
 									<div>&Uuml;berraschung</div>
 								</div>
 							</div>
-						</swiper-slide>
+						</swiper-slide> -->
 						<swiper-slide>
 							<div class="panel pause">
-								<h3 class="time">10:00</h3>
+								<h3 class="time">10:15</h3>
 								<h2>Pause</h2>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel pause">
-								<h3 class="time">10:30</h3>
+								<h3 class="time">10:45</h3>
 								<h2>Workshops</h2>
 								<div class="workshop">
 									<nuxt-link to="/programm/kv-reform-2023-wo-stehen-wir"
@@ -106,15 +121,15 @@
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel pause">
-								<h3 class="time">11:45</h3>
+								<h3 class="time">12:00</h3>
 								<h2>Mittag</h2>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">13:00</h3>
-								<h2>Anmoderation</h2>
-								<div class="details">
+								<h3 class="time">13:15</h3>
+								<h2>Anmoderation - weiter geht's</h2>
+								<div class="details" s>
 									<p>Referentin</p>
 									<div>
 										<nuxt-link to="/experten/nicole-fritschi">Nicole Fritschi</nuxt-link>
@@ -124,22 +139,22 @@
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">13:05</h3>
+								<h3 class="time">13:20</h3>
 								<nuxt-link to="/programm/lebenskompetenz-schlaegt-intelligenz"
 									><h2>Lebenskompetenz schl&auml;gt Intelligenz</h2></nuxt-link
 								>
 								<div class="details">
 									<p>Referentin</p>
-									<div>Margrit Stamm</div>
+									<div>Dr. Margrit Stamm</div>
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">13:50</h3>
-								<h2>3 Jugendliche erz&auml;hlen von ihrem Weg in die Berufsbildung</h2>
+								<h3 class="time">14:00</h3>
+								<h2>Interview: Unser Weg in die Berufsbildung</h2>
 								<div class="details">
-									<p>Referenten</p>
+									<p>Referierende</p>
 									<div>
 										<nuxt-link to="/experten/nicole-fritschi">Nicole Fritschi</nuxt-link>
 										<nuxt-link to="/experten/simon-hausammann">Simon Hausammann</nuxt-link>
@@ -205,7 +220,7 @@
 						<swiper-slide>
 							<div class="panel">
 								<h3 class="time">15:50</h3>
-								<h2>Anhand der digitalen Plattform den gemeinsamen Lernprozess reflektieren</h2>
+								<h2>Lernreflektion - unsere Lernreise</h2>
 								<div class="details">
 									<p>Referent</p>
 									<div>
@@ -216,17 +231,18 @@
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">16:10</h3>
-								<h2>Kreatives auf der B&uuml;hne</h2>
+								<h3 class="time">16:00</h3>
+								<h2>Die Kreativen</h2>
 								<div class="details">
-									<p>Vorf&uuml;hrung</p>
-									<div>&Uuml;berraschung</div>
+									<p>Referierende</p>
+									<nuxt-link to="/experten/nicole-fritschi">Nicole Fritschi</nuxt-link>
+									<div>Jaden Fischer</div>
 								</div>
 							</div>
 						</swiper-slide>
 						<swiper-slide>
 							<div class="panel">
-								<h3 class="time">16:25</h3>
+								<h3 class="time">16:20</h3>
 								<h2>Abschluss & Ausblick 2023</h2>
 								<div class="details">
 									<p>Referent</p>
