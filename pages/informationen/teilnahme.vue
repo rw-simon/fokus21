@@ -12,7 +12,7 @@
 				><br />Teilnahmegebühr: CHF 250.–
 			</p>
 			<hr />
-			<div class="login-buttons">
+			<div class="login-buttons" style="margin-bottom: 5rem">
 				<div>
 					<h3>Jetzt neu anmelden!</h3>
 					<nuxt-link class="button button-red" to="/user/register">Zur Anmeldung</nuxt-link>

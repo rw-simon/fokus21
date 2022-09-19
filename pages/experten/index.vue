@@ -15,7 +15,7 @@ export default {
 	name: 'experten',
 	head() {
 		return {
-			title: 'Experten | Fokus Berufsbildung 2021'
+			title: 'Experten | Fokus Berufsbildung 2021',
 		}
 	},
 	async asyncData({ store }) {
@@ -33,11 +33,13 @@ export default {
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', 'Experten')
-	}
+	},
 }
 </script>
 
 <style lang="sass" scoped>
+.container
+	padding-bottom: 4rem
 a
 	transition: transform 200ms ease-out
 	display: block

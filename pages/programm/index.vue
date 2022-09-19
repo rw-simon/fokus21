@@ -8,7 +8,7 @@
 				class="button"
 				>Herunterladen</a
 			>
-			<div style="margin-top: 2rem">
+			<div style="margin-top: 2rem" class="programm-slider">
 				<client-only>
 					<div class="swiper-pagination"></div>
 					<swiper class="swiper" :options="swiperOption">
@@ -316,6 +316,9 @@ export default {
 	border-radius: 8px
 	@include mobile
 		padding: 1rem
+		max-height: 50vh
+		overflow-y: scroll
+		padding-bottom: 4rem
 	&.pause
 		border: none
 	.details

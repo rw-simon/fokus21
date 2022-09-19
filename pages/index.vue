@@ -10,7 +10,7 @@
 		</div>
 		<div class="anmelden">
 			<nuxt-link to="/informationen/teilnahme"
-				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt=""/></span
+				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt="" /></span
 			></nuxt-link>
 		</div>
 	</div>
@@ -21,7 +21,7 @@ export default {
 	name: 'index',
 	head() {
 		return {
-			title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont'
+			title: 'Fokus Berufsbildung | Lernen – ein breiter Horizont',
 		}
 	},
 	data() {
@@ -29,7 +29,7 @@ export default {
 	},
 	mounted() {
 		this.$store.commit('pagetitle/change', '')
-	}
+	},
 }
 </script>
 
@@ -64,7 +64,7 @@ export default {
 				transform: rotate(-90deg)
 				position: fixed
 				bottom: 16rem
-				left: -9rem
+				left: -7rem
 		h1
 			font-size: 8rem
 			line-height: .9em

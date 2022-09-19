@@ -60,7 +60,7 @@
 					/></a>
 				</div>
 			</section> -->
-			<section class="admin">
+			<section class="admin" style="margin-bottom: 4rem">
 				<h2>Web &amp; Admin</h2>
 				<div class="logos">
 					<a href="https://www.rechtwinklig.ch" target="_blank"
