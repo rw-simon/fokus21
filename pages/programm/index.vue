@@ -109,7 +109,8 @@
 									<nuxt-link to="/programm/labor-berufsbildung-die-berufsbildung-weiterdenken"
 										><h3>Labor Berufsbildung – die Berufsbildung weiterdenken</h3></nuxt-link
 									>
-									<nuxt-link to="/experten/job-caddie">Job Caddie</nuxt-link>
+									<nuxt-link to="/experten/jacqueline-schaerli">Jacqueline Sch&auml;rli</nuxt-link> &
+									<nuxt-link to="/experten/andrea-ruckstuhl">Andrea Ruckstuhl</nuxt-link>
 								</div>
 								<div class="workshop">
 									<nuxt-link to="/programm/young-talents-lernende-gewinnen"
