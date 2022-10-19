@@ -4,15 +4,15 @@
 			<div class="page-title">
 				<div class="inner-title">
 					<h1><span>Fokus</span><span>Berufsbildung</span></h1>
-					<h2>4. Oktober 2022 | Parkarena Winterthur</h2>
+					<h2>Nächster Event: 19. September 2023</h2>
 				</div>
 			</div>
 		</div>
-		<div class="anmelden">
+		<!-- <div class="anmelden">
 			<nuxt-link to="/informationen/teilnahme"
 				>Teilnahme<span><img class="icon" src="/icons/icon_arrow_right.svg" alt="" /></span
 			></nuxt-link>
-		</div>
+		</div> -->
 	</div>
 </template>
 

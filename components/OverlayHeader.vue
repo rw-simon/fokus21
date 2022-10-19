@@ -6,11 +6,11 @@
 			</nuxt-link>
 		</div>
 		<div class="control-area">
-			<span>
+			<!-- <span>
 				<nuxt-link to="/user/dashboard">
 					<img :class="{ inverted: isHome }" src="/icons/icon_user.svg" alt="" />
 				</nuxt-link>
-			</span>
+			</span> -->
 			<navigation-main-menu :isHome="isHome" />
 		</div>
 	</header>

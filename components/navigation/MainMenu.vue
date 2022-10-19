@@ -5,21 +5,13 @@
 		</span>
 		<nav :class="{ inverted: isHome, opened: menuOpen }" @mouseleave="menuOpen = false" @click="menuOpen = false">
 			<transition-group name="menuitems">
-				<nuxt-link v-if="menuOpen" key="1" to="/programm">
+				<!-- <nuxt-link v-if="menuOpen" key="1" to="/programm">
 					Programm
-				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="2" to="/experten">
-					Expert*innen
-				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="3" to="/informationen">
-					Informationen
-				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="4" to="/informationen/teilnahme">
-					Teilnahme
-				</nuxt-link>
-				<nuxt-link v-if="menuOpen" key="5" to="/organisation">
-					Organisation
-				</nuxt-link>
+				</nuxt-link> -->
+				<nuxt-link v-if="menuOpen" key="2" to="/experten"> Expert*innen </nuxt-link>
+				<nuxt-link v-if="menuOpen" key="3" to="/informationen"> Informationen </nuxt-link>
+				<!-- <nuxt-link v-if="menuOpen" key="4" to="/informationen/teilnahme"> Teilnahme </nuxt-link> -->
+				<nuxt-link v-if="menuOpen" key="5" to="/organisation"> Organisation </nuxt-link>
 				<!-- <nuxt-link v-if="menuOpen" key="1" to="/2021">
 					Fokus 2021
 				</nuxt-link> -->
@@ -33,20 +25,20 @@ export default {
 	name: 'main-menu',
 	data() {
 		return {
-			menuOpen: false
+			menuOpen: false,
 		}
 	},
 	methods: {
 		toggleMenu() {
 			this.menuOpen = !this.menuOpen
-		}
+		},
 	},
 	props: {
 		isHome: {
 			type: Boolean,
-			default: false
-		}
-	}
+			default: false,
+		},
+	},
 }
 </script>
 
